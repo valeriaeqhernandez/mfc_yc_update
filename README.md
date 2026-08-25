@@ -1,5 +1,7 @@
 # MFC Sourcing Pipelines: YC pre-MFN + a16z Speedrun
 
+![MFC Pipeline Control GUI](sample.png)
+
 Two related, independent sourcing pipelines live in this folder:
 
 - **YC pre-MFN pipeline** (`yc_list_raw.py`, `li_search_selenium.py`, `li_native_search.py`,
@@ -69,9 +71,7 @@ The one thing you actually need if you just want this running on its own, no cod
 
 4. **Turn it on**: two ways to do this, both with the same underlying effect.
 
-   **Double-click `MFC Pipeline Control.app`**: a black control-panel window, no terminal needed. YC and Speedrun each get their own status readout and buttons (AUTO ON / AUTO OFF / CHANGE INTERVAL / CHANGE RECIPIENTS / CHANGE BATCH / RUN NOW / PREFLIGHT CHECK), with a live output console at the bottom showing whatever's currently running. Click **AUTO ON** for whichever pipeline(s) you want running on their own.
-
-   ![MFC Pipeline Control GUI](sample.png)
+   **Double-click `MFC Pipeline Control.app`**: a black control-panel window, no terminal needed (see screenshot at the top of this README). YC and Speedrun each get their own status readout and buttons (AUTO ON / AUTO OFF / CHANGE INTERVAL / CHANGE RECIPIENTS / CHANGE BATCH / RUN NOW / PREFLIGHT CHECK), with a live output console at the bottom showing whatever's currently running. Click **AUTO ON** for whichever pipeline(s) you want running on their own.
 
    **Or, from a terminal:**
    ```
