@@ -1,0 +1,7 @@
+#!/bin/bash
+# Launcher for MFC Pipeline Control.app — hardcodes the repo's absolute
+# path so double-clicking works regardless of where this .app itself is
+# aliased/dragged to (Dock, /Applications, Desktop, etc.), and logs any
+# startup crash to a file since there's no visible terminal to see it in.
+cd "/Users/valeriaquero/MFC_vc" || exit 1
+exec "/Users/valeriaquero/MFC_vc/.venv/bin/python3" "control_panel.py" >> "$HOME/Library/Logs/mfc-pipeline-control.log" 2>&1

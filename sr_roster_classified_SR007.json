@@ -1,0 +1,782 @@
+{
+  "lazyweb": {
+    "display_name": "Lazyweb",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "bounty": {
+    "display_name": "Bounty",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "munari": {
+    "display_name": "Munari Labs",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "primitive": {
+    "display_name": "Primitive Labs",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "orbital": {
+    "display_name": "Orbital",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "corgi": {
+    "display_name": "Corgi",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "manual_verdict": "CONFIRMED",
+    "manual_verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run.",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any automated pipeline run.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Manually confirmed as SR007 via independent web search on 2026-08-25, prior to any pipeline run."
+  },
+  "drs": {
+    "display_name": "DRS",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Single-source mention found via manual web search on 2026-08-25. Name is short/ambiguous (\"DRS\") and could collide with unrelated companies or be a false positive \u2014 not marked confirmed, left for the pipeline to gather corroborating evidence and re-classify.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/osmanelsoz_im-excited-to-share-that-drs-a16z-speedrun-activity-7490501019643121664-6UtZ",
+        "snippet": "Osman Elsoz's Post\nLinkedIn \u00b7 Osman Elsoz\nCa. 250 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. My path started at Procter & Gamble in ...",
+        "found_at": "2026-08-25T16:11:56.838684+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/ahmetonur_im-excited-to-share-that-our-new-company-activity-7490538461461106688-esTj",
+        "snippet": "Ahmet Onur's Post\nLinkedIn \u00b7 Ahmet Onur\nCa. 200 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that our new company DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. We have been building DRS ...",
+        "found_at": "2026-08-25T16:11:56.838706+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/beratkjamili_startups-aimpact-mentor-activity-7490530603310821376-J9q_",
+        "snippet": "Berat Kjamili's Post\nLinkedIn \u00b7 Berat Kjamili\nCa. 10 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. My path started at Procter & Gamble in ...",
+        "found_at": "2026-08-25T16:11:56.838742+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/osmanelsoz_im-excited-to-share-that-drs-a16z-speedrun-activity-7490501019643121664-6UtZ",
+        "snippet": "Osman Elsoz's Post\nLinkedIn \u00b7 Osman Elsoz\nCa. 250 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. My path started at Procter & Gamble in ...",
+        "found_at": "2026-08-25T16:11:56.838869+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/ahmetonur_im-excited-to-share-that-our-new-company-activity-7490538461461106688-esTj",
+        "snippet": "Ahmet Onur's Post\nLinkedIn \u00b7 Ahmet Onur\nCa. 200 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that our new company DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. We have been building DRS ...",
+        "found_at": "2026-08-25T16:11:56.838891+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/beratkjamili_startups-aimpact-mentor-activity-7490530603310821376-J9q_",
+        "snippet": "Berat Kjamili's Post\nLinkedIn \u00b7 Berat Kjamili\nCa. 10 Reaktionen \u00b7 vor 3 Wochen I'm excited to share that DRS (a16z speedrun) has joined a16z speedrun (SR007) in San Francisco. My path started at Procter & Gamble in ...",
+        "found_at": "2026-08-25T16:11:56.838977+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Two separate LinkedIn posts from team members explicitly state DRS joined a16z speedrun SR007."
+  },
+  "veritas": {
+    "display_name": "Veritas",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T14:40:03+00:00",
+    "evidence": [
+      {
+        "source": "manual_web_search",
+        "query": "",
+        "url": "",
+        "snippet": "Single-source mention found via manual web search on 2026-08-25. Name is generic/ambiguous (\"Veritas\") and could collide with unrelated companies of the same name \u2014 not marked confirmed, left for the pipeline to gather corroborating evidence and re-classify.",
+        "found_at": "2026-08-25T14:40:03+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "No actual evidence content provided, only a note about ambiguity with no corroborating claim."
+  },
+  "applications": {
+    "display_name": "Applications",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838126+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T16:11:56.838126+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T16:11:56.839482+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T17:13:31.998583+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T17:13:31.999401+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "This is a generic word from an applications-open announcement, not a company name."
+  },
+  "fall": {
+    "display_name": "Fall",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838286+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T16:11:56.838286+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T16:11:56.839498+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T17:13:31.998668+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://a16z.com/applications-for-a16z-speedrun-sr007-are-now-open/",
+        "snippet": "Applications for a16z speedrun SR007 are now open\nAndreessen Horowitz\nhttps://a16z.com \u203a applications-f... 20.04.2026 \u2014 Applications for a16z speedrun SR007 are now open \u00b7 Our Summer/Fall cohort (SR007) runs from July 27 through October 11, 2026. Applications are ...",
+        "found_at": "2026-08-25T17:13:31.999440+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Generic word from a cohort date description, not a company name."
+  },
+  "kevin jiang": {
+    "display_name": "Kevin Jiang",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838430+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://www.linkedin.com/posts/imkevinj_a16z-speedrun-007-applications-just-opened-activity-7455280999963287553-7iDc",
+        "snippet": "a16z speedrun 007 applications just opened ...\nLinkedIn \u00b7 Kevin Jiang\nCa. 200 Reaktionen \u00b7 vor 3 Monaten a16z speedrun 007 applications just opened comment 'SR007' and I'll tell you how we got in it was honestly a life\u2011changing experience. i ...",
+        "found_at": "2026-08-25T16:11:56.838430+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://www.linkedin.com/posts/imkevinj_a16z-speedrun-007-applications-just-opened-activity-7455280999963287553-7iDc",
+        "snippet": "a16z speedrun 007 applications just opened ...\nLinkedIn \u00b7 Kevin Jiang\nCa. 200 Reaktionen \u00b7 vor 3 Monaten a16z speedrun 007 applications just opened comment 'SR007' and I'll tell you how we got in it was honestly a life\u2011changing experience. i ...",
+        "found_at": "2026-08-25T16:11:56.839587+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "This is a person promoting how to apply, not a company claiming SR007 membership."
+  },
+  "ca": {
+    "display_name": "Ca.",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838442+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://www.linkedin.com/posts/imkevinj_a16z-speedrun-007-applications-just-opened-activity-7455280999963287553-7iDc",
+        "snippet": "a16z speedrun 007 applications just opened ...\nLinkedIn \u00b7 Kevin Jiang\nCa. 200 Reaktionen \u00b7 vor 3 Monaten a16z speedrun 007 applications just opened comment 'SR007' and I'll tell you how we got in it was honestly a life\u2011changing experience. i ...",
+        "found_at": "2026-08-25T16:11:56.838442+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://www.linkedin.com/posts/katedeyneka_let-a16z-speedrun-007-begin-im-incredibly-activity-7488267601937281025-JruO",
+        "snippet": "Kate Deyneka's Post\nLinkedIn \u00b7 Kate Deyneka\nCa. 190 Reaktionen \u00b7 vor 3 Wochen Let a16z speedrun 007 begin! I'm incredibly grateful that Reelful is among the teams selected for this cohort Excited to spend the next 12 ...",
+        "found_at": "2026-08-25T16:11:56.838510+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" hiring \"SR007\"",
+        "url": "https://www.linkedin.com/posts/imkevinj_a16z-speedrun-007-applications-just-opened-activity-7455280999963287553-7iDc",
+        "snippet": "a16z speedrun 007 applications just opened ...\nLinkedIn \u00b7 Kevin Jiang\nCa. 200 Reaktionen \u00b7 vor 3 Monaten a16z speedrun 007 applications just opened comment 'SR007' and I'll tell you how we got in it was honestly a life\u2011changing experience. i ...",
+        "found_at": "2026-08-25T16:11:56.839597+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Artifact text fragment ('Ca. 200 Reaktionen'), not a company name."
+  },
+  "applying": {
+    "display_name": "Applying",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838473+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://x.com/ArtinBogdanov/status/2048829011682525561",
+        "snippet": "Applying to @a16z @speedrun 007? If you want the exact ...\nX \u00b7 ArtinBogdanov\nCa. 140 \u201eGef\u00e4llt mir\u201c-Angaben \u00b7 vor 4 Monaten Applying to @a16z @speedrun 007? If you want the exact pitch deck that got us in, comment \"SUN\" and dm. Otherwise, here's the overview:",
+        "found_at": "2026-08-25T16:11:56.838473+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Generic word from a promotional post about applying, not a company name."
+  },
+  "angaben": {
+    "display_name": "Angaben",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838483+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://x.com/ArtinBogdanov/status/2048829011682525561",
+        "snippet": "Applying to @a16z @speedrun 007? If you want the exact ...\nX \u00b7 ArtinBogdanov\nCa. 140 \u201eGef\u00e4llt mir\u201c-Angaben \u00b7 vor 4 Monaten Applying to @a16z @speedrun 007? If you want the exact pitch deck that got us in, comment \"SUN\" and dm. Otherwise, here's the overview:",
+        "found_at": "2026-08-25T16:11:56.838483+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Artifact text fragment from a German UI string, not a company name."
+  },
+  "final": {
+    "display_name": "Final",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838536+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://tradersunion.com/news/market-voices/show/2042833-a16z-speedrun-san-francisco/",
+        "snippet": "Andrew chen: Final week to apply for a16z speedrun 007 ...\nTraders Union\nhttps://tradersunion.com \u203a show Last call to apply for the a16z speedrun 007 program in San Francisco, with up to $1 million investment available for new startups.",
+        "found_at": "2026-08-25T16:11:56.838536+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Generic word from an applications-deadline announcement, not a company name."
+  },
+  "last": {
+    "display_name": "Last",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838543+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun 007\"",
+        "url": "https://tradersunion.com/news/market-voices/show/2042833-a16z-speedrun-san-francisco/",
+        "snippet": "Andrew chen: Final week to apply for a16z speedrun 007 ...\nTraders Union\nhttps://tradersunion.com \u203a show Last call to apply for the a16z speedrun 007 program in San Francisco, with up to $1 million investment available for new startups.",
+        "found_at": "2026-08-25T16:11:56.838543+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Generic word from an applications-deadline announcement, not a company name."
+  },
+  "how": {
+    "display_name": "How",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838570+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"speedrun007\"",
+        "url": "https://www.speedrun.com/de-DE/007nf/guides",
+        "snippet": "James Bond 007: Nightfire - Anleitungen\nSpeedrun.com\nhttps://www.speedrun.com \u203a de-DE \u203a guides How to speedrun 007: Nightfire (Operative difficulty) \u00b7 FitterSpace. 7 years ago ; Nightfire Speedrunning: Movement and Controls \u00b7 FitterSpace. 10 years ago.",
+        "found_at": "2026-08-25T16:11:56.838570+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"speedrun007\"",
+        "url": "https://www.speedrun.com/de-DE/007nf/guides/w7dba",
+        "snippet": "James Bond 007: Nightfire - Anleitungen\nSpeedrun.com\nhttps://www.speedrun.com \u203a de-DE \u203a guides How to speedrun 007: Nightfire (Operative difficulty). Anleitungen. /. How to speedrun 007: Nightfire (Operative difficulty). Aktualisiert 7 years ago von ...",
+        "found_at": "2026-08-25T16:11:56.838610+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"speedrun007\"",
+        "url": "https://www.speedrun.com/de-DE/007nf/guides",
+        "snippet": "James Bond 007: Nightfire - Anleitungen\nSpeedrun.com\nhttps://www.speedrun.com \u203a de-DE \u203a guides How to speedrun 007: Nightfire (Operative difficulty) \u00b7 FitterSpace. 7 years ago ; Nightfire Speedrunning: Movement and Controls \u00b7 FitterSpace. 10 years ago.",
+        "found_at": "2026-08-25T17:13:31.998866+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Unrelated content about James Bond 007 video game speedrunning, not the a16z program."
+  },
+  "philyron": {
+    "display_name": "Philyron",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838764+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/in/heon-lee",
+        "snippet": "Heon Lee - building Philyron (a16z SR007)\nLinkedIn \u00b7 Heon Lee\nCa. 1860 Follower Rebuilding Maritime Industry | building Philyron (a16z SR007) \u00b7 Experience: Philyron \u00b7 Education: University of Michigan \u00b7 Location: San Francisco Bay Area ...",
+        "found_at": "2026-08-25T16:11:56.838764+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Founder's LinkedIn headline explicitly states 'building Philyron (a16z SR007)'."
+  },
+  "report": {
+    "display_name": "Report",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838927+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/gabrielste1n_stoked-to-share-that-ive-joined-a16z-speedrun-activity-7490086509493276672-SCCf",
+        "snippet": "Gabriel Stein's Post\nLinkedIn \u00b7 Gabriel Stein\nCa. 380 Reaktionen \u00b7 vor 3 Wochen Building openwhispr.com (a16z SR007). 2w. Report this post; Close menu. Stoked to share that I've joined a16z speedrun 007 as a solo founder to ...",
+        "found_at": "2026-08-25T16:11:56.838927+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Artifact text fragment ('Report this post'), not a company name."
+  },
+  "stoked": {
+    "display_name": "Stoked",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838933+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/gabrielste1n_stoked-to-share-that-ive-joined-a16z-speedrun-activity-7490086509493276672-SCCf",
+        "snippet": "Gabriel Stein's Post\nLinkedIn \u00b7 Gabriel Stein\nCa. 380 Reaktionen \u00b7 vor 3 Wochen Building openwhispr.com (a16z SR007). 2w. Report this post; Close menu. Stoked to share that I've joined a16z speedrun 007 as a solo founder to ...",
+        "found_at": "2026-08-25T16:11:56.838933+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Artifact word fragment from a post, not a company name."
+  },
+  "explore": {
+    "display_name": "Explore",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.838954+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"joined a16z speedrun\" \"SR007\"",
+        "url": "https://x.com/brianyoungilcho",
+        "snippet": "Brian Cho (@brianyoungilcho) / Posts / X\nX\nhttps://x.com \u203a Explore vor 2 Tagen \u2014 I'm an a16z @speedrun-backed founder (SR007), and I only hire two kinds of people. Sellers. Your job is to increase revenue. If you can't ...",
+        "found_at": "2026-08-25T16:11:56.838954+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "Artifact from an X.com URL path, not a company name."
+  },
+  "we": {
+    "display_name": "We",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839032+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"backed by a16z speedrun\" \"SR007\"",
+        "url": "https://thedissentsf.com/article/primitive-labs-ai-files-1-5m-safe-closes-785k-with-a16z-speedrun-leading-the-pre",
+        "snippet": "Primitive Labs AI Files $1.5M SAFE, Closes $785K With a16z ...\nthedissentsf.com\nhttps://thedissentsf.com \u203a article 04.08.2026 \u2014 ... (SR007). CEO Rohit Talluri confirmed the backing on LinkedIn: \"We are happy to announce that we are backed by a16z Speedrun.\" Co-founder and ...",
+        "found_at": "2026-08-25T16:11:56.839032+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "\"We\" is not an actual company name; the real company is Primitive Labs AI misquoted."
+  },
+  "rumbo": {
+    "display_name": "Rumbo AI",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839145+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"selected for a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/agust%C3%ADn-baiocco-243bb990_big-news-im-co-founding-rumbo-ai-a16z-activity-7490875106295209984-9Mxm",
+        "snippet": "Agust\u00edn Baiocco's Post\nLinkedIn \u00b7 Agust\u00edn Baiocco\nCa. 210 Reaktionen \u00b7 vor 2 Wochen Big news: I'm co-founding Rumbo AI (a16z SR007), and we just got selected for a16z speedrun. Here's something most people don't know: when ...",
+        "found_at": "2026-08-25T16:11:56.839145+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"selected for a16z speedrun\" \"SR007\"",
+        "url": "https://ar.linkedin.com/in/agust%C3%ADn-baiocco-243bb990",
+        "snippet": "Agust\u00edn Baiocco - Co-founder & CTO @ Rumbo AI (backed ...\nLinkedIn \u00b7 Agust\u00edn Baiocco\nCa. 1920 Follower Co-founder & CTO @ Rumbo AI (backed by a16z speedrun) \u00b7 Experiencia: Rumbo AI (a16z SR007) \u00b7 Educaci\u00f3n: Columbia Business School \u00b7 Ubicaci\u00f3n: Argentina ...",
+        "found_at": "2026-08-25T16:11:56.839212+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"selected for a16z speedrun\" \"SR007\"",
+        "url": "https://www.linkedin.com/posts/agust%C3%ADn-baiocco-243bb990_big-news-im-co-founding-rumbo-ai-a16z-activity-7490875106295209984-9Mxm",
+        "snippet": "Agust\u00edn Baiocco's Post\nLinkedIn \u00b7 Agust\u00edn Baiocco\nCa. 210 Reaktionen \u00b7 vor 2 Wochen Big news: I'm co-founding Rumbo AI (a16z SR007), and we just got selected for a16z speedrun. Here's something most people don't know: when ...",
+        "found_at": "2026-08-25T17:13:31.999180+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Co-founder explicitly states Rumbo AI is part of a16z SR007."
+  },
+  "vene health": {
+    "display_name": "Vene Health",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839293+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"part of a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/niknandi_excited-to-share-vene-health-is-officially-activity-7495633849914150912-bFad",
+        "snippet": "Nik N.'s Post\nLinkedIn \u00b7 Nik N.\nCa. 110 Reaktionen \u00b7 vor 6 Tagen Excited to share Vene Health is officially part of a16z speedrun (SR007)! Vene is proactive health assistant that runs healthcare for you.",
+        "found_at": "2026-08-25T16:11:56.839293+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"part of a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/niknandi_excited-to-share-vene-health-is-officially-activity-7495633849914150912-bFad",
+        "snippet": "Nik N.'s Post\nLinkedIn \u00b7 Nik N.\nCa. 110 Reaktionen \u00b7 vor 6 Tagen Excited to share Vene Health is officially part of a16z speedrun (SR007)! Vene is proactive health assistant that runs healthcare for you.",
+        "found_at": "2026-08-25T17:13:31.999282+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Team member post explicitly confirms Vene Health is officially part of SR007."
+  },
+  "vene": {
+    "display_name": "Vene",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839376+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"part of a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/posts/aritras_a-few-months-ago-i-posted-that-i-turned-down-activity-7495827339973570560-Fmyw",
+        "snippet": "Aritra Saha's Post\nLinkedIn \u00b7 Aritra Saha\nCa. 160 Reaktionen \u00b7 vor 6 Tagen Health is officially part of a16z speedrun (SR007). Vene is a proactive health assistant that runs healthcare for you. It calls between ...",
+        "found_at": "2026-08-25T16:11:56.839376+00:00"
+      },
+      {
+        "source": "google",
+        "query": "\"part of a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/company/vene-health",
+        "snippet": "Vene Health\nLinkedIn \u00b7 Vene Health\nCa. 500 Follower Vene Health is officially part of a16z speedrun (SR007). Vene is a proactive health assistant that runs healthcare for you. It calls between visits to check ...",
+        "found_at": "2026-08-25T16:11:56.839402+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Same company (Vene Health) confirmed as SR007 via founder and company LinkedIn posts."
+  },
+  "kairo": {
+    "display_name": "Kairo",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839447+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"part of a16z speedrun SR007\"",
+        "url": "https://www.linkedin.com/in/ankitchandra06",
+        "snippet": "Ankit Chandra - building Kairo (a16z SR007)\nLinkedIn \u00b7 Ankit Chandra\nCa. 3470 Follower building Kairo (a16z SR007) | CE @ Georgia Tech | Prev @ AWS \u00b7 Developing security solutions for smart contracts, on-chain protocols, and blockchain ...",
+        "found_at": "2026-08-25T16:11:56.839447+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Ankit Chandra \n \u2022 2nd\nbuilding Kairo (a16z SR007) | CE @ Georgia Tech | Prev @ AWS\nCumming, Georgia, United States\nConnect\nYasin Ehsan, Peyton Marcotte & 1 other mutual connection",
+        "found_at": "2026-08-25T16:11:56.840523+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Ankit Chandra \n \u2022 2nd\nbuilding Kairo (a16z SR007) | CE @ Georgia Tech | Prev @ AWS\nCumming, Georgia, United States\nConnect\nYasin Ehsan, Peyton Marcotte & 1 other mutual connection",
+        "found_at": "2026-08-25T17:13:32.000635+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Founder's LinkedIn headline states 'building Kairo (a16z SR007)'."
+  },
+  "mariana minerals": {
+    "display_name": "Mariana Minerals",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839674+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" \"SR007\" raised",
+        "url": "https://www.frontrun.vc/blog/a16z-speedrun-cohort-007-companies/",
+        "snippet": "a16z Speedrun SR007 - all 29 companies, before demo day | frontrun\nfrontrun.vc\nhttps://www.frontrun.vc \u203a blog tl;dr: this is the a16z speedrun cohort 007 (SR007) list, mapped before demo ... Mariana Minerals raised $310M, Valar Atomics raised $1B, OLIX raised $312M, The ...",
+        "found_at": "2026-08-25T16:11:56.839674+00:00"
+      }
+    ],
+    "verdict": "UNCERTAIN",
+    "verdict_reason": "Only third-party aggregator blog lists it as SR007, not a founder or a16z staff statement."
+  },
+  "building blueprint": {
+    "display_name": "Building Blueprint",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839737+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" \"SR007\" raised",
+        "url": "https://www.linkedin.com/posts/davidsfeldt_we-just-raised-1m-led-by-a16z-speedrun-to-activity-7495907306941984768-7Are",
+        "snippet": "We just raised $1M led by a16z speedrun to turn ideas into ...\nLinkedIn \u00b7 David Feldt\nCa. 170 Reaktionen \u00b7 vor 5 Tagen We just raised $1M led by a16z speedrun to turn ideas into hardware ... Building Blueprint (a16z SR007). 3d. Report this comment; Close menu.",
+        "found_at": "2026-08-25T16:11:56.839737+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Pranav Seelam \n \u2022 2nd\nBuilding Blueprint (a16z SR007)\nUnited States\nConnect\nYasin Ehsan is a mutual connection",
+        "found_at": "2026-08-25T16:11:56.840438+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Pranav Seelam \n \u2022 2nd\nBuilding Blueprint (a16z SR007)\nUnited States\nConnect\nYasin Ehsan is a mutual connection",
+        "found_at": "2026-08-25T17:13:32.000412+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Multiple team members' LinkedIn profiles/posts explicitly tag Building Blueprint as a16z SR007."
+  },
+  "san francisco": {
+    "display_name": "San Francisco",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.839790+00:00",
+    "evidence": [
+      {
+        "source": "google",
+        "query": "\"a16z speedrun\" \"SR007\" raised",
+        "url": "https://speedrun.a16z.com/faq",
+        "snippet": "FAQ - a16z Speedrun\na16z Speedrun\nhttps://speedrun.a16z.com \u203a faq The application deadline for our summer + fall San Francisco cohort (SR007) was May 17, 2026, at 11:59 PM PT. ... Can I participate in a16z speedrun while being a ...",
+        "found_at": "2026-08-25T16:11:56.839790+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "This is a generic FAQ mention of the cohort location, not a company name."
+  },
+  "stealth startup": {
+    "display_name": "Stealth Startup",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.840395+00:00",
+    "evidence": [
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Adithiya Balaguru \n \u2022 2nd\nCo-Founder @ Stealth Startup (a16z SR007)\nHerndon, Virginia, United States\nConnect\nPishoy Elias is a mutual connection",
+        "found_at": "2026-08-25T16:11:56.840395+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Rohith Yelisetty \n \u2022 2nd\nCo-Founder @ Stealth Startup (SR007) | prev. UPenn M&T\nHerndon, Virginia, United States\nConnect\nPishoy Elias, David Cao & 1 other mutual connection",
+        "found_at": "2026-08-25T16:11:56.840571+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Adithiya Balaguru \n \u2022 2nd\nCo-Founder @ Stealth Startup (a16z SR007)\nHerndon, Virginia, United States\nConnect\nPishoy Elias is a mutual connection",
+        "found_at": "2026-08-25T17:13:32.000310+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Rohith Yelisetty \n \u2022 2nd\nCo-Founder @ Stealth Startup (SR007) | prev. UPenn M&T\nHerndon, Virginia, United States\nConnect\nPishoy Elias, David Cao & 1 other mutual connection",
+        "found_at": "2026-08-25T17:13:32.000740+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "'Stealth Startup' is a placeholder, not an actual identifiable company name."
+  },
+  "adrian su": {
+    "display_name": "Adrian Su",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.840457+00:00",
+    "evidence": [
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Adrian Su\u0161ec \n \u2022 2nd\nco-founder at her labs (a16z SR007)\nSan Francisco Bay Area\nFollow\nHannah Gao is a mutual connection\n \u00b7 1K followers",
+        "found_at": "2026-08-25T16:11:56.840457+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "(SR007)",
+        "url": "",
+        "snippet": "Adrian Su\u0161ec \n \u2022 2nd\nco-founder at her labs (a16z SR007)\nSan Francisco Bay Area\nFollow\nHannah Gao is a mutual connection\n \u00b7 1K followers",
+        "found_at": "2026-08-25T17:13:32.000465+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "This is a person's name (Adrian Su\u0161ec) misfired as a company; actual company is 'her labs'."
+  },
+  "preman": {
+    "display_name": "PreMan",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.840548+00:00",
+    "evidence": [
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Alspencer Omondi \n \u2022 2nd\nCofounder @ PreMan (a16z speedrun SR007)\nClaremont, California, United States\nConnect\nEusila Kitur is a mutual connection",
+        "found_at": "2026-08-25T16:11:56.840548+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Alspencer Omondi \n \u2022 2nd\nCofounder @ PreMan (a16z speedrun SR007)\nClaremont, California, United States\nConnect\nEusila Kitur is a mutual connection",
+        "found_at": "2026-08-25T17:13:32.000688+00:00"
+      }
+    ],
+    "verdict": "CONFIRMED",
+    "verdict_reason": "Co-founder's LinkedIn headline explicitly states PreMan is part of a16z speedrun SR007."
+  },
+  "jose s": {
+    "display_name": "Jose S.",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.840623+00:00",
+    "evidence": [
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Jose S. \n \u2022 3rd+\nCo-Founder (a16z speedrun SR007)\nSanta Monica, California, United States\nMessage",
+        "found_at": "2026-08-25T16:11:56.840623+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Jose S. \n \u2022 3rd+\nCo-Founder (a16z speedrun SR007)\nSanta Monica, California, United States\nMessage",
+        "found_at": "2026-08-25T17:13:32.000858+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "This is a person's name with no company identified, just a role claim."
+  },
+  "design partner": {
+    "display_name": "Design Partner",
+    "batch": "SR007",
+    "first_seen": "2026-08-25T16:11:56.840654+00:00",
+    "evidence": [
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Renata Amaral Morris \n \u2022 3rd+\nFounder & CEO @ EAT Studio \u270f\ufe0f  | Forbes | 4x Princeton Speaker | Design Partner @ a16z Speedrun (SR007) | Strategic Brand + Graphic Design for: Google \u2022 Netflix \u2022 Amazon \u2022 Adidas \u2022 Riot Games\nUnited States\nFollow\n3K followers",
+        "found_at": "2026-08-25T16:11:56.840654+00:00"
+      },
+      {
+        "source": "linkedin_people_search",
+        "query": "a16z speedrun SR007",
+        "url": "",
+        "snippet": "Renata Amaral Morris \n \u2022 3rd+\nFounder & CEO @ EAT Studio \u270f\ufe0f  | Forbes | 4x Princeton Speaker | Design Partner @ a16z Speedrun (SR007) | Strategic Brand + Graphic Design for: Google \u2022 Netflix \u2022 Amazon \u2022 Adidas \u2022 Riot Games\nUnited States\nFollow\n3K followers",
+        "found_at": "2026-08-25T17:13:32.000930+00:00"
+      }
+    ],
+    "verdict": "REJECTED",
+    "verdict_reason": "'Design Partner' refers to a role at a16z Speedrun itself, not a portfolio company."
+  }
+}

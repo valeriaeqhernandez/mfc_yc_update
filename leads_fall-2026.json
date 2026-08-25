@@ -1,0 +1,351 @@
+{
+  "batch_tag": "YC F26",
+  "yc_batch_slug": "fall-2026",
+  "generated_at": "2026-08-03T02:01:48.043975+00:00",
+  "yc_directory_count": 6,
+  "leads": [
+    {
+      "name": "Jamie Yau",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/in/jamiey3u",
+      "snippet": "Jamie Yau - Co-Founder @ Collar (YC F26) The AI ...\nCo-Founder @ Collar (YC F26) The AI Platform for Private Market Investors. \u00b7 Experience: Collar (YC F26) \u00b7 Education: Y Combinator \u00b7 Location: United States ...",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag",
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Collar YC F26"
+    },
+    {
+      "name": "Seungmin Hong",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/in/shong0504",
+      "snippet": "Seungmin Hong - Co-founder @ Simantic (YC F26)\nCo-founder @ Simantic (YC F26) | ECE @ UWaterloo \u00b7 Building firmware simulation for agentic hardware development \u00b7 Experience: Simantic (YC F26) ...",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Simantic YC F26"
+    },
+    {
+      "name": "Simantic (YC F26)",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/company/simantic",
+      "snippet": "Simantic (YC F26)\nSeungmin Hong. Co-founder @ Simantic (YC F26) | ECE @\u2026 Click here to ... Co-founder @ Simantic (YC F26) | ECE @ UWaterloo. 3w Edited. Report this post",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag",
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "company page tag YC F26"
+    },
+    {
+      "name": "William Mahon",
+      "company_guess": "ClaimKit",
+      "link": "https://www.linkedin.com/in/wmaho",
+      "snippet": "William Mahon - Co-Founder & CTO at ClaimKit (YC F26)\nCo-Founder & CTO at ClaimKit (YC F26) \u00b7 Ex-Google Software Engineer Building ClaimKit to help companies claim their R&amp;D tax incentives faster &amp; ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag ClaimKit YC F26"
+    },
+    {
+      "name": "tochukwu nkemdilim",
+      "company_guess": "microsandbox",
+      "link": "https://ca.linkedin.com/in/toksdotdev",
+      "snippet": "tochukwu nkemdilim - co-founder @ microsandbox (yc f26)\nExperience. Microsandbox (YC F26) Graphic. Co-founder & CTO. Microsandbox (YC F26). Mar 2026 - Present 5 months. fast, secure, and programmable microVM runtime ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag microsandbox YC F26"
+    },
+    {
+      "name": "Collar (YC F26)",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/company/collarai",
+      "snippet": "Collar (YC F26)\nCo-Founder @ Collar (YC F26)\u2026 Click here to view Natasha Wijaya's profile. Natasha Wijaya. Student at City University of Hong Kong \u00b7 See all employees. Similar ...",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "company page Collar YC F26"
+    },
+    {
+      "name": "Kazel Koh En Yang",
+      "company_guess": "Collar",
+      "link": "https://sg.linkedin.com/in/kazel-koh-en-yang-811172186",
+      "snippet": "Kazel Koh En Yang - @ Collar (YC F'26) | Inventor | GIC\nCollar (YC F'26) | Inventor | GIC \u00b7 I build &amp; invest in things people want (hopefully) \u00b7 Experience: Collar (YC F26) ... Co-Founder of CyberLife AI - ...",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Collar YC F26"
+    },
+    {
+      "name": "Simantic Joins Y Combinator to Modernize Embedded ...",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/posts/shong0504_simantic-yc-f26-is-joining-y-combinator-activity-7479048301078540288-pKG-",
+      "snippet": "Simantic Joins Y Combinator to Modernize Embedded ...\nSimantic Joins Y Combinator to Modernize Embedded Systems. View profile for Seungmin Hong. Seungmin Hong. Co-founder @ Simantic (YC F26) | ECE @ ...",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "google_bio_tag",
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "headline Simantic joins YC"
+    },
+    {
+      "name": "Rachel Huang",
+      "company_guess": "ClaimKit",
+      "link": "https://au.linkedin.com/in/rach-huang",
+      "snippet": "Rachel Huang - CEO @ ClaimKit (YC F26) | R&D tax\nCEO @ ClaimKit (YC F26) | R&D tax \u00b7 Professional tennis player ... Joined the Antler residency program to find a co-founder to build my next start-up.",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_bio_tag"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag ClaimKit YC F26"
+    },
+    {
+      "name": "Y Combinator's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/y-combinator_the-deadline-to-apply-for-yc-f26-is-tonight-activity-7487645454369726464-jU7f",
+      "snippet": "Y Combinator's Post\nThe deadline to apply for YC F26 is tonight at 8pm PT! If you're an ... Y Combinator's Post. View organization page for Y Combinator. Y ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "generic deadline reminder"
+    },
+    {
+      "name": "Osama Jaber's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/osama-jaber-osama2001_rightnow-yc-f26-is-joining-y-combinator-activity-7466832098037784577-0lnH",
+      "snippet": "Osama Jaber's Post\nRightNow (YC F26) is joining Y Combinator It started as a CUDA code editor. Now it's a full inference platform that makes AI models run ...",
+      "yc_match": "RightNow",
+      "pre_mfn": false,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "RightNow joining YC F26"
+    },
+    {
+      "name": "Max Kolysh's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/maxkolysh_the-yc-f26-application-deadline-is-in-7-days-activity-7485111947609157632-wtQ-",
+      "snippet": "Max Kolysh's Post\nMax Kolysh's Post. View profile for Max Kolysh. Max Kolysh. Visiting Partner at Y Combinator. 2d. Report this post; Close menu. The YC F26 ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "partner generic batch mention"
+    },
+    {
+      "name": "yc #founders #software #ai #sass #innovation #disruption",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/rach-huang_yc-founders-software-activity-7486216008538480640-lyKA",
+      "snippet": "yc #founders #software #ai #sass #innovation #disruption\n... Y Combinator's summer request for startups was explicitly calling for \"AI-native service companies\" - defined as companies that don't sell ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "hashtag spam generic RFS mention"
+    },
+    {
+      "name": "Iusef Hafith-Russo's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/iusef_some-incredible-news-from-the-jordanian-startup-activity-7466849663976099840-5eY2",
+      "snippet": "Iusef Hafith-Russo's Post\nRightNow (YC F26) just got into Y Combinator! A couple of months ago I had a brief chat with Osama Jaber and Jaber J. of a potential ...",
+      "yc_match": "RightNow",
+      "pre_mfn": false,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "RightNow got into YC"
+    },
+    {
+      "name": "GUILD Joins Y Combinator S26 | Kaya Celebi posted on ...",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/kaya-celebi_were-excited-to-announce-that-guild-is-joining-activity-7475606483179741185-nPRl",
+      "snippet": "GUILD Joins Y Combinator S26 | Kaya Celebi posted on ...\nGUILD Joins Y Combinator ... Simantic (YC F26) is joining Y Combinator for the Fall 2026 batch to modernize embedded systems and electronics ...",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Simantic joining YC F26 batch mentioned"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/in/shong0504/",
+      "snippet": "Feed post\nSeungmin Hong\n  \u2022 2nd\nCo-founder @ Simantic (YC F26) | ECE @ UWaterloo\n4w \u2022 \nFollow\nSimantic (YC F26) is joining Y Combinator for the Fall 2026 batch to modernize embedded systems and electronics engineering!\n\nAI is changing how hardware and firmware is designed, but the tools we use to test and validate hardware are decades old, and not fit for how the industry is changing.\n\nWe\u2019re build",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "full post announcing Simantic joining YC"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/osama-jaber-osama2001/",
+      "snippet": "Feed post\nOsama Jaber\n  \u2022 3rd+\nHello there\n2mo \u2022 \nFollow\nRightNow (YC F26) is joining Y Combinator\n\nIt started as a CUDA code editor. Now it's a full inference platform that makes AI models run faster and cost less\n\nBuilding this with my brother Jaber J.. From Jordan, for the world\n\nTo everyone who tested the early versions, thank you\n634\n49\n7",
+      "yc_match": "RightNow",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "full post RightNow joining YC"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/company/sgsmucis/posts/",
+      "snippet": "Feed post\nSMU College of Integrative Studies\n2mo \u2022 \nFollow\nMeet Jamie Yau! \ud83d\ude80\u2728\n\nA Year 3 student pursuing her Individualised Major in Impact Management, Jamie is building at the intersection of technology, strategy, and innovation as the co-founder of Collar (YC F26) \u2014 a startup developing secure AI solutions for regulated industries like government and finance.\n\nWhat started as an idea has since g",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Collar YC F26 mention in bio post"
+    },
+    {
+      "name": "Aziz Hanafi ",
+      "company_guess": "Degla AI",
+      "link": "https://www.linkedin.com/in/aziz-hanafi-496a67164/",
+      "snippet": "Aziz Hanafi \nBuilding @ Degla AI | Computer Science & Engineering @ MIT \ud83e\uddab",
+      "yc_match": "Degla Inc",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "no YC batch mention"
+    },
+    {
+      "name": "Jamie Yau ",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/in/jamiey3u/",
+      "snippet": "Jamie Yau \nCo-Founder @ Collar (YC F26)                                                                            The AI Platform for Private Market Investors.",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Collar YC F26"
+    },
+    {
+      "name": "Olivia Laufer ",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/in/olivialaufer/",
+      "snippet": "Olivia Laufer \nFounding Engineer @ Simantic (YC F26) | prev @ AssistIQ | Computer Science (AI) @ University of Waterloo",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Simantic YC F26"
+    },
+    {
+      "name": "tochukwu nkemdilim ",
+      "company_guess": "microsandbox",
+      "link": "https://www.linkedin.com/in/toksdotdev/",
+      "snippet": "tochukwu nkemdilim \nco-founder @ microsandbox (yc f26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag microsandbox YC F26"
+    },
+    {
+      "name": "Marc McCole ",
+      "company_guess": "Fenn AI",
+      "link": "https://www.linkedin.com/in/marcmccole/",
+      "snippet": "Marc McCole \nBuilding Fenn AI (YC F26)| Ex-Life360, Ex-Tubi, Ex-Microsoft",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Fenn AI YC F26"
+    },
+    {
+      "name": "Seddik Turki ",
+      "company_guess": "Degla AI",
+      "link": "https://www.linkedin.com/in/seddik-turki-737401199/",
+      "snippet": "Seddik Turki \nFounding AI Engineer @ Degla AI (YC F26) | Kaggle Master | AI Agents",
+      "yc_match": "Degla Inc",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Degla AI YC F26"
+    },
+    {
+      "name": "Derek Ho ",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/in/derek-ho1809/",
+      "snippet": "Derek Ho \nFounding Engineer @ Simantic (YC F26)",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "bio tag Simantic YC F26"
+    },
+    {
+      "name": "Kazel Koh En Yang ",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/in/kazel-koh-en-yang-811172186/",
+      "snippet": "Kazel Koh En Yang \n@ Collar (YC F\u201926) | Inventor | GIC",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag shows company joined YC F'26"
+    }
+  ]
+}

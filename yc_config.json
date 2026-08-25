@@ -1,0 +1,9 @@
+{
+  "batch_tag": "YC F26",
+  "yc_batch_slug": "fall-2026",
+  "recipients": [
+    "querovaleria04@gmail.com"
+  ],
+  "automatic_mode": false,
+  "run_interval_hours": 12
+}

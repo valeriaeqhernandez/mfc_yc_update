@@ -1,0 +1,16 @@
+# Virtualenv: reinstall from requirements.txt, don't commit hundreds of
+# vendored packages.
+.venv/
+
+# Real LinkedIn login session (cookies, local storage); sensitive,
+# machine-specific, and shared between the YC and Speedrun pipelines.
+li_chrome_profile/
+
+# Python bytecode cache: regenerated automatically.
+__pycache__/
+*.pyc
+
+# Runtime lock files (overlap prevention for scheduled runs); process
+# state, not something to version.
+.sr_run_pipeline.lock
+.yc_run_pipeline.lock
