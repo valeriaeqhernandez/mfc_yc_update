@@ -220,7 +220,16 @@ def search_people(driver, query, interactive: bool = True):
             text = el.text
             if not text:
                 continue
-            page_results.append({"text": text, "query": query})
+            # Confirmed live: this was never captured at all, so a hit
+            # whose company name couldn't be extracted from the snippet
+            # text had nothing left to trace back to; the actual profile
+            # was gone with no way to follow up, even manually. Capturing
+            # it costs nothing extra (same already-loaded page).
+            try:
+                link = el.find_element(By.CSS_SELECTOR, "a[href*='/in/']").get_attribute("href")
+            except Exception:
+                link = ""
+            page_results.append({"text": text, "query": query, "link": link})
 
         if not page_results:
             break

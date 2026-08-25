@@ -117,7 +117,7 @@ def run(interactive: bool = True, recipients: list[str] | None = None):
         step("2/5: LinkedIn native search (posts + people)")
         sr_li_native_search.run(interactive=interactive)
 
-        step("3/5: Merge into provisional roster")
+        step("3/5: Merge into provisional roster (+ Google follow-up for ambiguous people-search hits)")
         sr_unified_leads.run()
 
         step("4/5: AI classification")

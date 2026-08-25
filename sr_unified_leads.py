@@ -30,6 +30,8 @@ EXTRACTION RULES (applied per raw hit before it's allowed onto the roster):
 
 import json
 import re
+import random
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -41,6 +43,12 @@ SNAP_DIR = Path("snapshots") / CURRENT_BATCH
 # batch's roster, exactly the cross-batch contamination this pipeline is
 # supposed to avoid (see README.md's "What carries over unchanged").
 ROSTER_PATH = Path(f"sr_roster_{CURRENT_BATCH}.json")
+
+# People-search hits where the batch tag matched but no company name could
+# be resolved even after the Google follow-up (see resolve_ambiguous_via_
+# google() below); kept separate from the roster since these are keyed by
+# PERSON, not company, and are for manual review, not automated output.
+UNRESOLVED_PATH = Path(f"sr_unresolved_people_{CURRENT_BATCH}.json")
 
 SUFFIXES = [
     r"\binc\.?\b", r"\bllc\b", r"\bltd\.?\b", r"\bco\.?\b", r"\bcorp\.?\b",
@@ -95,14 +103,16 @@ def is_valid_candidate(candidate: str) -> bool:
     return not any(w in STOP_WORDS for w in words)
 
 
-def nearest_candidate(text: str, tag_match: re.Match) -> str | None:
+def nearest_candidate(text: str, tag_match: re.Match, exclude: str | None = None) -> str | None:
     window_start = max(0, tag_match.start() - WINDOW_BEFORE)
     window_end = min(len(text), tag_match.end() + WINDOW_AFTER)
     window = text[window_start:window_end]
     tag_start_in_window = tag_match.start() - window_start
     tag_end_in_window = tag_match.end() - window_start
+    exclude_norm = exclude.strip().lower() if exclude else None
 
     before, after = [], []
+    excluded_before = False
     for name_match in NAME_RE.finditer(window):
         # Skip anything overlapping the tag match itself (prevents the
         # name-capture from ever cannibalizing part of the tag).
@@ -111,13 +121,36 @@ def nearest_candidate(text: str, tag_match: re.Match) -> str | None:
         candidate = name_match.group(0).strip()
         if not is_valid_candidate(candidate):
             continue
-        if name_match.end() <= tag_start_in_window:
+        is_before = name_match.end() <= tag_start_in_window
+        # On short LinkedIn People-search bios, the person's own name (on
+        # the card's first line) can land inside this same window and get
+        # picked up as if it were the company; confirmed live with
+        # "Priya Nair ... a16z SR007" misfiring "Priya Nair" itself as
+        # the company. `exclude` lets callers rule that out explicitly
+        # rather than tightening the window for every other source too.
+        if exclude_norm and candidate.strip().lower() == exclude_norm:
+            if is_before:
+                excluded_before = True
+            continue
+        if is_before:
             before.append((tag_start_in_window - name_match.end(), candidate))
         else:
             after.append((name_match.start() - tag_end_in_window, candidate))
 
     if before:
         return min(before)[1]
+    if excluded_before:
+        # The ONLY thing sitting before the tag was the person's own name
+        # (e.g. "Adrian Zabica ... CTO - a16z speedrun SR007" with no
+        # company anywhere in the headline) -- confirmed live that falling
+        # through to the after-tag window in this specific situation
+        # reliably grabs an unrelated field from a different part of the
+        # card (city, school, prior employer: "London", "Harvard Business
+        # School", "ex-Microsoft" all fired this way), never the company.
+        # Correctly reporting "no company found" here is what lets
+        # find_ambiguous_people() route this person to the Google
+        # follow-up instead of polluting the roster with a wrong guess.
+        return None
     if after:
         return min(after)[1]
     return None
@@ -156,10 +189,14 @@ def extract_candidates(text: str, source: str, query: str, evidence_url: str = "
     if not TAG_RE.search(text):
         return []
 
+    # See nearest_candidate()'s `exclude` param: only relevant for People-
+    # search cards, where the person's own name sits right on the card.
+    own_name = extract_person_name(text) if source == "linkedin_people_search" else None
+
     out = []
     seen_names = set()
     for tag_match in TAG_RE.finditer(text):
-        raw_name = nearest_candidate(text, tag_match)
+        raw_name = nearest_candidate(text, tag_match, exclude=own_name)
         if not raw_name or raw_name in seen_names:
             continue
         seen_names.add(raw_name)
@@ -175,10 +212,107 @@ def extract_candidates(text: str, source: str, query: str, evidence_url: str = "
     return out
 
 
+def extract_person_name(text: str) -> str | None:
+    """
+    LinkedIn People-search cards put the person's name on the first
+    non-empty line, e.g. "Arnav Bhalla\n• 2nd\nCo-Founder @ Stealth
+    Startup (a16z SR007)...". Only called on hits find_ambiguous_people()
+    already couldn't extract a company name from, as a name to hand to a
+    follow-up Google search instead (see resolve_ambiguous_via_google()).
+    """
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    for line in lines:
+        if re.fullmatch(r"•?\s*(1st|2nd|3rd\+?)", line, re.I):
+            continue
+        return line
+    return None
+
+
+def find_ambiguous_people(text: str, query: str, link: str):
+    """
+    Companion to extract_candidates(): flags LinkedIn People-search hits
+    where the batch tag genuinely matched but no company name could be
+    pulled from the card's (often truncated) snippet text -- confirmed
+    live that the real company name sometimes only appears on the full
+    profile page. This pipeline deliberately does NOT visit profiles to
+    check (that's real automated traffic against a real, logged-in
+    personal LinkedIn account); instead it returns a person-keyed record
+    so resolve_ambiguous_via_google() has a name + link to follow up on
+    via an anonymous Google search instead.
+    """
+    if is_noise(text) or mentions_prior_batch_only(text):
+        return None
+    tag_matches = list(TAG_RE.finditer(text))
+    if not tag_matches:
+        return None
+    name = extract_person_name(text)
+    if any(nearest_candidate(text, m, exclude=name) for m in tag_matches):
+        return None  # a real company name WAS found here; not ambiguous
+    if not name:
+        return None
+    return {"person_name": name, "link": link, "snippet": text[:400], "query": query}
+
+
+def resolve_ambiguous_via_google(ambiguous_people: list[dict]):
+    """
+    For each ambiguous person, runs ONE targeted Google search on their
+    name instead of opening their LinkedIn profile. Opening profiles one
+    by one would add real automated browsing activity to a real, logged-in
+    personal LinkedIn account -- exactly the kind of pattern that gets
+    accounts flagged; Google search is already used elsewhere in this
+    pipeline anonymously (no login at all), so this adds zero incremental
+    LinkedIn risk. Reuses sr_google_search's driver/CAPTCHA-handling
+    rather than duplicating it.
+
+    Returns (resolved_candidates, still_unresolved).
+    """
+    resolved, unresolved = [], []
+    if not ambiguous_people:
+        return resolved, unresolved
+
+    import sr_google_search as gsearch
+
+    seen_names = set()
+    people = []
+    for p in ambiguous_people:
+        key = p["person_name"].lower()
+        if key in seen_names:
+            continue
+        seen_names.add(key)
+        people.append(p)
+
+    print(f"  {len(people)} unique name(s) need a Google follow-up (no LinkedIn profile visits)...")
+    driver = gsearch.build_driver()
+    try:
+        for person in people:
+            query = f'"{person["person_name"]}" "a16z speedrun {CURRENT_BATCH}"'
+            try:
+                results = gsearch.search_query(driver, query)
+            except Exception as e:
+                print(f"    WARNING: Google lookup failed for {person['person_name']!r}: {e}")
+                results = []
+
+            found_here = []
+            for r in results:
+                text = f"{r.get('title', '')} {r.get('snippet', '')}"
+                found_here += extract_candidates(text, "google_person_lookup", query, r.get("url") or person["link"])
+
+            if found_here:
+                resolved.extend(found_here)
+            else:
+                unresolved.append(person)
+            time.sleep(random.uniform(4, 8))
+    finally:
+        driver.quit()
+
+    return resolved, unresolved
+
+
 def load_raw_snapshots():
     hits = []
+    ambiguous = []
     if not SNAP_DIR.exists():
-        return hits
+        return hits, ambiguous
     for f in SNAP_DIR.glob("google_raw_*.json"):
         for r in json.loads(f.read_text()):
             hits += extract_candidates(f"{r.get('title','')} {r.get('snippet','')}", "google", r.get("query", ""), r.get("url", ""))
@@ -187,8 +321,14 @@ def load_raw_snapshots():
             hits += extract_candidates(r.get("text", ""), "linkedin_post", r.get("query", ""))
     for f in SNAP_DIR.glob("li_people_raw_*.json"):
         for r in json.loads(f.read_text()):
-            hits += extract_candidates(r.get("text", ""), "linkedin_people_search", r.get("query", ""))
-    return hits
+            text = r.get("text", "")
+            query = r.get("query", "")
+            link = r.get("link", "")
+            hits += extract_candidates(text, "linkedin_people_search", query, link)
+            amb = find_ambiguous_people(text, query, link)
+            if amb:
+                ambiguous.append(amb)
+    return hits, ambiguous
 
 
 def merge_into_roster(candidates):
@@ -220,7 +360,24 @@ def merge_into_roster(candidates):
 
 
 def run():
-    candidates = load_raw_snapshots()
+    candidates, ambiguous = load_raw_snapshots()
+
+    resolved, unresolved = [], []
+    if ambiguous:
+        print(f"{len(ambiguous)} LinkedIn People-search hit(s) matched the batch tag but had no "
+              f"extractable company name from the snippet text alone.")
+        resolved, unresolved = resolve_ambiguous_via_google(ambiguous)
+        candidates += resolved
+        if resolved:
+            print(f"  Resolved {len(resolved)} via Google.")
+
+    if unresolved:
+        UNRESOLVED_PATH.write_text(json.dumps(unresolved, indent=2))
+        print(f"  {len(unresolved)} still unresolved after the Google follow-up; "
+              f"saved to {UNRESOLVED_PATH} for manual review (name + profile link).")
+    elif UNRESOLVED_PATH.exists():
+        UNRESOLVED_PATH.unlink()
+
     roster = merge_into_roster(candidates)
     print(f"Roster now has {len(roster)} provisional {CURRENT_BATCH} companies "
           f"({len(candidates)} new candidate mentions processed this run).")
