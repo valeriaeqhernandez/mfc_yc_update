@@ -121,8 +121,8 @@ Nothing below this point is required reading to just turn it on. The rest of thi
 |---|---|
 | `sr_queries.py` | Query templates + bio-pattern regexes for whichever batch is set in `sr_config.json`. Reads `CURRENT_BATCH`/`CURRENT_BATCH_NUM` from config rather than hardcoding them. |
 | `sr_google_search.py` | Anonymous Google search, adapted from `li_search_selenium.py`. Raw hits land in `snapshots/<BATCH>/google_raw_<date>.json`. |
-| `sr_li_native_search.py` | LinkedIn Posts + People search via the shared `li_chrome_profile/`, adapted from `li_native_search.py`. Raw hits land in `snapshots/<BATCH>/li_posts_raw_<date>.json` and `li_people_raw_<date>.json`. |
-| `sr_unified_leads.py` | No YC-style ground truth exists for an in-progress Speedrun batch, so this extracts company-name candidates from the raw hits above and merges them into a persistent **provisional roster**, `sr_roster_<BATCH>.json`; every entry stays provisional until Demo Day. |
+| `sr_li_native_search.py` | LinkedIn Posts + People search via the shared `li_chrome_profile/`, adapted from `li_native_search.py`. Raw hits land in `snapshots/<BATCH>/li_posts_raw_<date>.json` and `li_people_raw_<date>.json`; People-search hits also capture each card's profile link, so a hit with no extractable company name still has something to trace back to. |
+| `sr_unified_leads.py` | No YC-style ground truth exists for an in-progress Speedrun batch, so this extracts company-name candidates from the raw hits above and merges them into a persistent **provisional roster**, `sr_roster_<BATCH>.json`; every entry stays provisional until Demo Day. For LinkedIn People-search hits where the batch tag matched but no company name could be read off the card itself, it also runs a **Google-based fallback** on the person's name instead of leaving the hit untraceable; see "Resolving LinkedIn People-search hits with no visible company name" below. |
 | `classify_sr_leads.py` | AI pass over the roster: each candidate becomes CONFIRMED / UNCERTAIN / REJECTED (see below). Writes `sr_roster_classified_<BATCH>.json`. |
 | `send_sr_leads_report.py` | Writes `<batch>_leads_report.xlsx` and emails it **every run** (unlike the YC version): see "Email notifications" below. Tracks state in `sr_last_sent_<BATCH>.json`. |
 | `sr_config.py` / `sr_config.json` | The settings meant to be tweaked without touching code: recipients, automatic-mode on/off, run interval, current batch. Edit via `sr_configure.py`. |
@@ -130,6 +130,7 @@ Nothing below this point is required reading to just turn it on. The rest of thi
 | `sr_run_pipeline.py` | Runs all five Speedrun steps in order with one command. What both manual runs and automatic mode actually invoke. |
 | `sr_preflight_check.py` | Confirms credentials, SMTP login, and Chrome/LinkedIn setup are all actually working before you trust an unattended run. |
 | `sr_roster_SR007.json`, `sr_roster_classified_SR007.json`, `sr_last_sent_SR007.json`, `sr007_leads_report.xlsx` | Output for the current batch (SR007) specifically: filenames change automatically when the batch changes (see below). |
+| `sr_unresolved_people_SR007.json` | People from LinkedIn People-search hits whose company couldn't be determined even after the Google fallback (see below): name, profile link, and snippet, kept for manual review. Keyed by person, not company, so it's separate from the roster; recomputed (not accumulated) each run, so it always reflects current state. Only created once there's at least one such person. |
 | `snapshots/` | Per-batch raw search hits (`snapshots/SR007/...`), same "don't delete, resets tracking" note as the YC snapshot folders. |
 
 ## Setup
@@ -226,6 +227,19 @@ Set by `classify_sr_leads.py`'s AI pass over each candidate's evidence:
 - **REJECTED**: the evidence doesn't hold up: a generic applications-open announcement, a scout/"DM me" post, a mention of a different batch, a scraped UI/metadata fragment mistaken for a company name, or not a real company name at all.
 
 Every candidate stays in `sr_roster_<BATCH>.json` / `sr_roster_classified_<BATCH>.json` regardless of verdict; REJECTED means excluded from the emailed spreadsheet, not deleted, so a later run with stronger evidence can still flip it to CONFIRMED. (The YC pipeline's `classify_leads.py` uses a simpler true/false `ai_relevant` flag instead of this three-way verdict, since it has YC's own directory as a downstream check that Speedrun doesn't have; see below.)
+
+## Resolving LinkedIn People-search hits with no visible company name
+
+Some People-search cards match the batch tag but don't show a company name anywhere in the visible snippet text; the real answer sometimes only lives on the full profile page (e.g. a card reading "CTO - a16z speedrun SR007" with a location line underneath, but no company mentioned at all). Rather than either silently dropping these hits or visiting each profile directly to check, `sr_unified_leads.py` (via `find_ambiguous_people()` / `resolve_ambiguous_via_google()`) does the following each run:
+
+1. **Capture the person's name and profile link** from the card itself (the company genuinely isn't there to extract).
+2. **Run one targeted Google search per unique name** (`"Name" "a16z speedrun SR007"`), reusing the same anonymous, no-login Google search already used elsewhere in the pipeline. Visiting each ambiguous profile directly was considered and deliberately rejected: that's real automated browsing against a real, logged-in personal LinkedIn account, which is exactly the pattern LinkedIn's anti-automation systems watch for. The Google fallback adds zero incremental LinkedIn traffic.
+3. **If a company name turns up** in the Google result, it's merged into the roster with both pieces of evidence (the original LinkedIn card and the Google hit).
+4. **If it still doesn't resolve**, the person (name, profile link, snippet) is saved to `sr_unresolved_people_<BATCH>.json` instead of vanishing with nothing left to follow up on by hand.
+
+Only the LinkedIn People-search source gets this treatment: it's the only one of the three raw sources (Google, LinkedIn Posts, LinkedIn People) where a specific person's profile is the thing behind each hit, so it's the only one with a name to fall back to searching for.
+
+Worth knowing when reading the roster: extraction deliberately excludes the person's own name from being mistaken for their company (a real bug found via live testing — on a short bio, the person's own name was the only capitalized phrase near the batch tag, and it briefly got roster-listed as if it were the company itself). Some Google-search noise (aggregator sites, unrelated posts) still occasionally lands on the roster as a low-quality entry; that's expected and handled the same way as any other regex-extraction noise, by the CONFIRMED/UNCERTAIN/REJECTED classification pass above, not by this step.
 
 ## Why the Speedrun pipeline isn't a straight port of the YC one
 
