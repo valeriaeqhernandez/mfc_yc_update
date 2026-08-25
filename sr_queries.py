@@ -51,11 +51,17 @@ SEARCH_QUERIES = [
     f'"a16z speedrun" "{CURRENT_BATCH}" raised',
 ]
 
-# LinkedIn People-search specific: search headline field for the bio tag.
-LINKEDIN_PEOPLE_SEARCH_QUERIES = [
-    f"({CURRENT_BATCH})",
-    f"a16z speedrun {CURRENT_BATCH}",
-]
+# LinkedIn People search used to only try 2 short patterns here (bare tag,
+# "a16z speedrun SR007"), while Google/Posts search got the full 11-query
+# list including "raised", "hiring", "backed by", "selected for", "part
+# of". Confirmed via a manual LinkedIn People-search test (screenshot,
+# 2026-08-26) that those richer patterns DO surface real profiles the
+# short list was missing entirely (e.g. "a16z speedrun SR007 raised"
+# found Brian Cho / Baro and Ishaan Shaurya Chamoli / ChatOverflow) —
+# LinkedIn's People search evidently indexes more than just the literal
+# headline field. Reusing the same query list as Google/Posts search
+# closes that gap.
+LINKEDIN_PEOPLE_SEARCH_QUERIES = SEARCH_QUERIES
 
 # Noise filters: matches that should NOT be treated as a join signal even
 # though they contain batch keywords. Applications-open/close announcements

@@ -145,7 +145,15 @@ def extract_candidates(text: str, source: str, query: str, evidence_url: str = "
         return []
     if mentions_prior_batch_only(text):
         return []
-    if not any(p in text for p in BATCH_BIO_PATTERNS + [f"speedrun {CURRENT_BATCH[-3:]}", f"speedrun{CURRENT_BATCH[-3:]}"]):
+    # Gate on TAG_RE itself, not the narrower BATCH_BIO_PATTERNS list (which
+    # requires parens, e.g. "(SR007)"). Confirmed live that real bios skip
+    # the parens entirely ("Co-Founder & CEO @ Baro, a16z SR007", no
+    # parens) — the old gate silently dropped these before extraction ever
+    # got a chance to run, even though nearest_candidate() would have
+    # correctly found the company name; e.g. Baro (from your manual
+    # LinkedIn screenshot) was present in the raw scrape but never made it
+    # onto the roster because of this exact gate, not a search failure.
+    if not TAG_RE.search(text):
         return []
 
     out = []

@@ -35,9 +35,12 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import requests
+
+from anthropic_cost import UsageTracker
 
 API_URL = "https://api.anthropic.com/v1/messages"
 DEFAULT_MODEL = "claude-sonnet-5"
@@ -77,12 +80,14 @@ def build_user_message(leads: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def call_claude(leads: list[dict], api_key: str, model: str) -> list[dict]:
+def call_claude(leads: list[dict], api_key: str, model: str, tracker: UsageTracker) -> list[dict]:
     """
     Sends all leads in ONE request (cheaper, fewer calls, and gives the
     model useful context across leads) rather than one call per lead.
     Returns a list of {"relevant": bool, "reason": str} in the same order
-    as the input leads.
+    as the input leads. Accumulates this call's token usage into `tracker`
+    regardless of whether parsing succeeds afterward, since the call was
+    still billed either way.
     """
     resp = requests.post(
         API_URL,
@@ -93,14 +98,19 @@ def call_claude(leads: list[dict], api_key: str, model: str) -> list[dict]:
         },
         json={
             "model": model,
-            "max_tokens": 2000,
+            # Bumped from 2000 after the same limit truncated a mid-JSON
+            # response on the Speedrun classifier (identical code shape,
+            # this batch is even larger at 25 entries); raising it is free
+            # unless the model actually needs the extra room.
+            "max_tokens": 4000,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": build_user_message(leads)}],
         },
-        timeout=60,
+        timeout=120,  # was 60s; matches the fix applied to classify_sr_leads.py
     )
     resp.raise_for_status()
     data = resp.json()
+    tracker.add(data.get("usage", {}))
 
     text_blocks = [b["text"] for b in data.get("content", []) if b.get("type") == "text"]
     raw_text = "".join(text_blocks).strip()
@@ -134,15 +144,17 @@ def run(input_path: Path, api_key: str, model: str, batch_size: int = 25):
         print(f"ERROR: {input_path} not found.", file=sys.stderr)
         sys.exit(1)
 
+    started = time.monotonic()
     data = load_leads(input_path)
     leads = data.get("leads", [])
     print(f"Classifying {len(leads)} leads via {model}...")
 
+    tracker = UsageTracker(model)
     for start in range(0, len(leads), batch_size):
         batch = leads[start : start + batch_size]
         print(f"  Batch {start}-{start + len(batch)}...")
         try:
-            results = call_claude(batch, api_key, model)
+            results = call_claude(batch, api_key, model, tracker)
         except Exception as e:
             print(f"  ERROR classifying this batch: {e}", file=sys.stderr)
             print("  Leaving these leads unclassified (no ai_relevant field added).", file=sys.stderr)
@@ -160,6 +172,8 @@ def run(input_path: Path, api_key: str, model: str, batch_size: int = 25):
 
     input_path.write_text(json.dumps(data, indent=2))
     print(f"\nUpdated {input_path} with ai_relevant / ai_reason fields.")
+    elapsed = time.monotonic() - started
+    print(f"Classification step: {tracker.summary()}, took {elapsed:.1f}s.")
 
 
 def main():

@@ -47,6 +47,14 @@ PROFILE_DIR = Path("li_chrome_profile").resolve()
 OUT_DIR = Path("snapshots") / CURRENT_BATCH
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+# Same fix as li_native_search.py's MAX_PEOPLE_PAGES: LinkedIn's People
+# search shows ~10 results/page and previously only page 1 was ever
+# fetched. Confirmed live (a manual LinkedIn search turning up real SR007
+# candidates the pipeline had missed entirely) that genuine matches
+# commonly sit past page 1. Capped rather than unbounded, since more
+# pages means more automated requests in a row.
+MAX_PEOPLE_PAGES = 5
+
 def detect_chrome_major_version():
     """
     Same fix as sr_google_search.py: undetected-chromedriver defaults to
@@ -137,38 +145,18 @@ def handle_checkpoint(driver, interactive: bool) -> bool:
 
 
 def search_posts(driver, query, interactive: bool = True):
+    """
+    Previously waited on and selected [data-view-name="feed-full-update"];
+    a live inspection (2026-08-26, same investigation as the fix in
+    li_native_search.py's run_linkedin_search()) found that attribute no
+    longer exists on the page at all, meaning this was hitting the 12s
+    WebDriverWait timeout and returning [] on every single call. Switched
+    to [role="listitem"] (the same ARIA anchor People search already
+    uses, and confirmed live to contain 6 real, relevant posts on the
+    same page in the same test) — LinkedIn evidently unified the markup
+    between Posts and People search results since this was first built.
+    """
     url = f"https://www.linkedin.com/search/results/content/?keywords={quote(query)}"
-    driver.get(url)
-    if not handle_checkpoint(driver, interactive):
-        return []
-    try:
-        WebDriverWait(driver, 12).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, '[data-view-name="feed-full-update"]'))
-        )
-    except Exception:
-        return []
-
-    time.sleep(2)  # let lazy-loaded content settle
-    posts = []
-    for el in driver.find_elements(By.CSS_SELECTOR, '[data-view-name="feed-full-update"]'):
-        text = el.text
-        if not text:
-            continue
-        posts.append({"text": text, "query": query})
-    return posts
-
-
-def search_people(driver, query, interactive: bool = True):
-    """
-    Wraps the query in explicit quotes before URL-encoding it, same fix
-    li_native_search.py's run_people_search() already needed: unquoted
-    multi-word keywords make LinkedIn's People search do loose/OR-ish
-    matching (confirmed live; an unquoted "(SR007)" query returned
-    unrelated 3rd-degree connections with no "SR007" anywhere in their
-    profile text), where exact-phrase quoting returns only real matches.
-    """
-    quoted_query = f'"{query}"'
-    url = f"https://www.linkedin.com/search/results/people/?keywords={quote(quoted_query)}"
     driver.get(url)
     if not handle_checkpoint(driver, interactive):
         return []
@@ -179,13 +167,67 @@ def search_people(driver, query, interactive: bool = True):
     except Exception:
         return []
 
-    time.sleep(2)
-    people = []
+    time.sleep(2)  # let lazy-loaded content settle
+    posts = []
     for el in driver.find_elements(By.CSS_SELECTOR, '[role="listitem"]'):
         text = el.text
         if not text:
             continue
-        people.append({"text": text, "query": query})
+        posts.append({"text": text, "query": query})
+    return posts
+
+
+def search_people(driver, query, interactive: bool = True):
+    """
+    Wraps a BARE query in explicit quotes before URL-encoding it, same fix
+    li_native_search.py's run_people_search() already needed: unquoted
+    multi-word keywords make LinkedIn's People search do loose/OR-ish
+    matching (confirmed live; an unquoted "(SR007)" query returned
+    unrelated 3rd-degree connections with no "SR007" anywhere in their
+    profile text), where exact-phrase quoting returns only real matches.
+
+    Only wraps if `query` doesn't already contain a quote character;
+    multi-clause patterns like '"joined a16z speedrun" "SR007"' are
+    already exact-phrase-quoted per clause, and wrapping THOSE in an
+    extra outer pair of quotes produces malformed syntax that silently
+    returns nothing rather than erroring. Confirmed live: every pattern
+    of that shape returned zero People-search hits until this was fixed,
+    while the plain bare patterns worked fine the whole time.
+
+    PAGINATION: walks LinkedIn's standard ?page=N parameter up to
+    MAX_PEOPLE_PAGES, stopping early the first time a page comes back
+    with no result blocks.
+    """
+    quoted_query = query if '"' in query else f'"{query}"'
+    encoded_query = quote(quoted_query)
+
+    people = []
+    for page in range(1, MAX_PEOPLE_PAGES + 1):
+        url = f"https://www.linkedin.com/search/results/people/?keywords={encoded_query}&page={page}"
+        driver.get(url)
+        if not handle_checkpoint(driver, interactive):
+            break
+        try:
+            WebDriverWait(driver, 12).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, '[role="listitem"]'))
+            )
+        except Exception:
+            break  # no more results
+
+        time.sleep(2)
+        page_results = []
+        for el in driver.find_elements(By.CSS_SELECTOR, '[role="listitem"]'):
+            text = el.text
+            if not text:
+                continue
+            page_results.append({"text": text, "query": query})
+
+        if not page_results:
+            break
+        people.extend(page_results)
+        if page < MAX_PEOPLE_PAGES:
+            time.sleep(random.uniform(3, 6))
+
     return people
 
 
@@ -201,18 +243,50 @@ def run(interactive: bool = True):
 
     driver = build_driver()
     all_posts, all_people = [], []
+
+    def with_recovery(search_fn, query):
+        """
+        Runs one search call; on a crashed driver, relaunches once and
+        retries this same call before giving up on just this query.
+        Confirmed live that a long native-search session (many queries in
+        one continuous browser session, now roughly doubled in volume)
+        can crash Chrome mid-run ("invalid session id: session deleted as
+        the browser has closed the connection"); previously that killed
+        data collection for every query after it, including all of
+        People search if it happened during Posts. This keeps the rest
+        of the run going on a fresh driver instead.
+        """
+        nonlocal driver
+        try:
+            return search_fn(driver, query, interactive)
+        except Exception as e:
+            print(f"    WARNING: query failed ({e}); relaunching Chrome and retrying once...", file=sys.stderr)
+            try:
+                driver.quit()
+            except Exception:
+                pass
+            try:
+                driver = build_driver()
+                return search_fn(driver, query, interactive)
+            except Exception as e2:
+                print(f"    WARNING: retry also failed ({e2}); skipping this query.", file=sys.stderr)
+                return []
+
     try:
         for q in SEARCH_QUERIES:
             print(f"[posts] {q}")
-            all_posts.extend(search_posts(driver, q, interactive))
+            all_posts.extend(with_recovery(search_posts, q))
             time.sleep(random.uniform(3, 7))
 
         for q in LINKEDIN_PEOPLE_SEARCH_QUERIES:
             print(f"[people] {q}")
-            all_people.extend(search_people(driver, q, interactive))
+            all_people.extend(with_recovery(search_people, q))
             time.sleep(random.uniform(3, 7))
     finally:
-        driver.quit()
+        try:
+            driver.quit()
+        except Exception:
+            pass
 
     today = datetime.now(timezone.utc).date().isoformat()
     (OUT_DIR / f"li_posts_raw_{today}.json").write_text(json.dumps(all_posts, indent=2))

@@ -43,6 +43,7 @@ from pathlib import Path
 import yc_list_raw as yc
 import li_search_selenium as gsel
 import li_native_search as lnat
+from yc_queries import BASE_PATTERNS, LINKEDIN_PEOPLE_PATTERNS
 
 
 def normalize(name: str) -> str:
@@ -269,34 +270,76 @@ def run(batch_tag: str, yc_batch_slug: str, interactive: bool = True):
     import time as _time
     _time.sleep(3)
 
-    # --- Source 3: LinkedIn native Posts search (logged in) ---
+    # --- Source 3 & 4: LinkedIn native Posts + People search (logged in) ---
     print("\n=== Source: LinkedIn Posts search (logged in) ===")
-    try:
-        if not lnat.PROFILE_DIR.exists():
-            print("  SKIPPED: no saved LinkedIn login profile. Run li_native_search.py --login-only first.")
-        else:
+    if not lnat.PROFILE_DIR.exists():
+        print("  SKIPPED: no saved LinkedIn login profile. Run li_native_search.py --login-only first.")
+    else:
+        try:
             ldriver = lnat.make_driver()
-            query = f'"{batch_tag}" "join"'
-            results = lnat.run_linkedin_search(ldriver, query, interactive)
-            print(f"  {len(results)} result(s)")
-            for r in results:
-                all_leads.append(
-                    make_lead("linkedin_post", r.get("author"), r.get("text", ""), r.get("link", ""), yc_companies)
-                )
-            lnat.human_like_delay(3, 6)
+        except Exception as e:
+            print(f"  WARNING: could not launch Chrome for LinkedIn native search: {e}", file=sys.stderr)
+            ldriver = None
+
+        if ldriver is not None:
+            def with_recovery(search_fn, query):
+                """
+                Runs one search call; on a crashed driver, relaunches once
+                and retries this same call before giving up on just this
+                query. Confirmed live that a long native-search session
+                (many queries in one continuous browser session, now
+                roughly doubled in volume) can crash Chrome mid-run
+                ("invalid session id: session deleted as the browser has
+                closed the connection"); previously that killed data
+                collection for every query after it, including all of
+                People search if the crash happened during Posts. This
+                keeps the rest of the run going on a fresh driver instead.
+                """
+                nonlocal ldriver
+                try:
+                    return search_fn(ldriver, query, interactive)
+                except Exception as e:
+                    print(f"    WARNING: query failed ({e}); relaunching Chrome and retrying once...", file=sys.stderr)
+                    try:
+                        ldriver.quit()
+                    except Exception:
+                        pass
+                    try:
+                        ldriver = lnat.make_driver()
+                        return search_fn(ldriver, query, interactive)
+                    except Exception as e2:
+                        print(f"    WARNING: retry also failed ({e2}); skipping this query.", file=sys.stderr)
+                        return []
+
+            for label, pattern in BASE_PATTERNS:
+                query = pattern.format(batch_tag=batch_tag)
+                print(f"  Query [{label}]: {query}")
+                results = with_recovery(lnat.run_linkedin_search, query)
+                print(f"    {len(results)} result(s)")
+                for r in results:
+                    all_leads.append(
+                        make_lead("linkedin_post", r.get("author"), r.get("text", ""), r.get("link", ""), yc_companies)
+                    )
+                lnat.human_like_delay(3, 6)
 
             # --- Source 4: LinkedIn native People search (same session) ---
             print("\n=== Source: LinkedIn People search (logged in) ===")
-            people_results = lnat.run_people_search(ldriver, batch_tag, interactive)
-            print(f"  {len(people_results)} result(s)")
-            for r in people_results:
-                combined_text = f"{r['name']}\n{r.get('headline', '')}"
-                all_leads.append(
-                    make_lead("linkedin_people", r.get("name"), combined_text, r.get("link", ""), yc_companies)
-                )
-            ldriver.quit()
-    except Exception as e:
-        print(f"  WARNING: LinkedIn native source failed: {e}", file=sys.stderr)
+            for label, pattern in LINKEDIN_PEOPLE_PATTERNS:
+                query = pattern.format(batch_tag=batch_tag)
+                print(f"  Query [{label}]: {query}")
+                people_results = with_recovery(lnat.run_people_search, query)
+                print(f"    {len(people_results)} result(s)")
+                for r in people_results:
+                    combined_text = f"{r['name']}\n{r.get('headline', '')}"
+                    all_leads.append(
+                        make_lead("linkedin_people", r.get("name"), combined_text, r.get("link", ""), yc_companies)
+                    )
+                lnat.human_like_delay(3, 6)
+
+            try:
+                ldriver.quit()
+            except Exception:
+                pass
 
     # --- Merge, dedupe, report ---
     leads = dedupe_leads(all_leads)

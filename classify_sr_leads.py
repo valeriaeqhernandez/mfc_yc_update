@@ -28,10 +28,12 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import requests
 
+from anthropic_cost import UsageTracker
 from sr_queries import CURRENT_BATCH
 
 API_URL = "https://api.anthropic.com/v1/messages"
@@ -84,7 +86,7 @@ def build_user_message(entries: list[tuple[str, dict]]) -> str:
     return json.dumps(payload, indent=2)
 
 
-def classify_batch(entries: list[tuple[str, dict]], api_key: str, model: str) -> list[dict]:
+def classify_batch(entries: list[tuple[str, dict]], api_key: str, model: str, tracker: UsageTracker) -> list[dict]:
     resp = requests.post(
         API_URL,
         headers={
@@ -94,14 +96,21 @@ def classify_batch(entries: list[tuple[str, dict]], api_key: str, model: str) ->
         },
         json={
             "model": model,
-            "max_tokens": 2000,
+            # Confirmed live: 2000 was too tight for a 15-entry batch and
+            # truncated mid-JSON-string, throwing away that whole batch's
+            # verdicts (including several real CONFIRMED companies) to the
+            # generic "classification call failed" fallback. This is a cap,
+            # not a spend target -- raising it costs nothing unless the
+            # model actually needs the room.
+            "max_tokens": 4000,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": build_user_message(entries)}],
         },
-        timeout=60,
+        timeout=120,  # was 60s; a real batch call timed out at that limit as the roster grew
     )
     resp.raise_for_status()
     data = resp.json()
+    tracker.add(data.get("usage", {}))
 
     text_blocks = [b["text"] for b in data.get("content", []) if b.get("type") == "text"]
     raw_text = "".join(text_blocks).strip()
@@ -123,10 +132,12 @@ def classify_batch(entries: list[tuple[str, dict]], api_key: str, model: str) ->
 
 
 def run(api_key: str, model: str):
+    started = time.monotonic()
     roster = json.loads(ROSTER_PATH.read_text())
     items = list(roster.items())
 
     verdicts = {}
+    tracker = UsageTracker(model)
 
     # Pre-seeded, manually-verified entries skip the API entirely.
     manual = [(k, v) for k, v in items if v.get("manual_verdict")]
@@ -145,7 +156,7 @@ def run(api_key: str, model: str):
     for batch in batched(to_classify, BATCH_SIZE):
         print(f"  Batch of {len(batch)}...")
         try:
-            results = classify_batch(batch, api_key, model)
+            results = classify_batch(batch, api_key, model, tracker)
         except Exception as e:
             print(f"  ERROR classifying this batch: {e}", file=sys.stderr)
             for key, entry in batch:
@@ -169,6 +180,8 @@ def run(api_key: str, model: str):
         counts[v["verdict"]] = counts.get(v["verdict"], 0) + 1
     print(f"\nClassified {len(classified)} entries: {counts}")
     print(f"Wrote {CLASSIFIED_PATH}")
+    elapsed = time.monotonic() - started
+    print(f"Classification step: {tracker.summary()}, took {elapsed:.1f}s.")
     return classified
 
 

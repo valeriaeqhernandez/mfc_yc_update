@@ -42,6 +42,40 @@ from pathlib import Path
 PROFILE_DIR = Path("li_chrome_profile").resolve()
 SNAPSHOT_DIR = Path("li_native_snapshots")
 
+# LinkedIn's People search shows ~10 results/page and previously only the
+# first page was ever fetched; confirmed live (a manual search turning up
+# real candidates the pipeline had missed) that genuine matches commonly
+# sit past page 1 for a broad batch tag. Capped rather than unbounded:
+# more pages means more automated requests in a row, which is exactly the
+# kind of volume this pipeline's pacing is designed to avoid looking like.
+MAX_PEOPLE_PAGES = 5
+
+
+def detect_chrome_major_version():
+    """
+    Same fix as li_search_selenium.py's version of this function:
+    undetected-chromedriver defaults to the globally "latest stable"
+    ChromeDriver rather than one matching the Chrome actually installed,
+    which breaks session creation whenever Chrome hasn't auto-updated
+    yet (confirmed live). Detect the real version and pin to it.
+    """
+    import undetected_chromedriver as uc
+
+    exe = uc.find_chrome_executable()
+    if not exe:
+        return None
+    try:
+        import re
+        import subprocess
+
+        out = subprocess.run([exe, "--version"], capture_output=True, text=True, timeout=5).stdout
+        m = re.search(r"(\d+)\.", out)
+        if m:
+            return int(m.group(1))
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return None
+
 
 def make_driver():
     """
@@ -59,7 +93,7 @@ def make_driver():
     # for this specific job, and this script is meant to be run manually
     # with you present anyway, so there's no headless use case here yet.
 
-    driver = uc.Chrome(options=options)
+    driver = uc.Chrome(options=options, version_main=detect_chrome_major_version())
     return driver
 
 
@@ -155,12 +189,19 @@ def run_linkedin_search(driver, query: str, interactive: bool = True) -> list[di
 
     SELECTOR NOTE: LinkedIn's CSS class names are randomized per build
     (hashed, e.g. "_64e7534f"), so unlike the Google script, selecting on
-    class names isn't viable at all here; confirmed by inspecting a real
-    saved page together. The stable anchor instead is the semantic
-    attribute div[data-view-name="feed-full-update"], found by tracing up
-    from a known real post link. Text extraction within each block still
-    relies on structure (first link, surrounding text) rather than class
-    names, since those remain unstable.
+    class names isn't viable at all here.
+
+    Previously anchored on div[data-view-name="feed-full-update"]; a live
+    inspection (2026-08-26) found that attribute no longer exists on the
+    page AT ALL (0 matches even for the bare attribute, no value filter),
+    and this had been silently returning 0 results on every run since at
+    least earlier the same day. [role="listitem"] (the same ARIA anchor
+    People search already uses) found 6 real, clearly relevant posts on
+    the same page in the same test, confirming LinkedIn unified the
+    markup between Posts and People search results at some point since
+    this selector was first verified. Text extraction within each block
+    still relies on structure (first link, surrounding text) rather than
+    class names, since those remain unstable.
     """
     from urllib.parse import quote
 
@@ -172,9 +213,7 @@ def run_linkedin_search(driver, query: str, interactive: bool = True) -> list[di
         return []
 
     results = []
-    post_blocks = driver.find_elements(
-        "css selector", 'div[data-view-name="feed-full-update"]'
-    )
+    post_blocks = driver.find_elements("css selector", '[role="listitem"]')
     for block in post_blocks:
         try:
             # First profile/company link in the block is reliably the author
@@ -214,45 +253,67 @@ def run_people_search(driver, keywords: str, interactive: bool = True) -> list[d
     search result list types. This is an informed bet, not a confirmed
     fact. If results come back empty or garbled, we'll do the same
     save-page-source-and-inspect process as before to confirm/fix it.
+
+    PAGINATION: walks LinkedIn's standard ?page=N parameter up to
+    MAX_PEOPLE_PAGES, stopping early the first time a page comes back with
+    no result blocks (either genuinely out of results, or a results wall).
     """
     from urllib.parse import quote
 
-    # Wrap in explicit quotes to force exact-phrase matching; confirmed
-    # necessary after a real test run showed LinkedIn's People search
-    # doing loose/OR-ish matching on unquoted multi-word keywords (e.g.
-    # "YC F26" unquoted returned YC P26, YC S26, YC W26, and unrelated
-    # "YC Alumni" results mixed in).
-    quoted_keywords = f'"{keywords}"'
-    url = f"https://www.linkedin.com/search/results/people/?keywords={quote(quoted_keywords)}"
-    driver.get(url)
-    human_like_delay(5, 9)
-
-    if not handle_checkpoint(driver, interactive):
-        return []
+    # Wrap BARE keywords in explicit quotes to force exact-phrase matching;
+    # confirmed necessary after a real test run showed LinkedIn's People
+    # search doing loose/OR-ish matching on unquoted multi-word keywords
+    # (e.g. "YC F26" unquoted returned YC P26, YC S26, YC W26, and
+    # unrelated "YC Alumni" results mixed in). Only wraps if `keywords`
+    # doesn't already contain a quote character; multi-clause patterns
+    # like '"backed by Y Combinator" "YC F26"' are already exact-phrase
+    # quoted per clause, and an extra outer wrap produces malformed syntax
+    # that silently returns nothing (confirmed live on the Speedrun
+    # pipeline, which had this same bug before it was found and fixed).
+    quoted_keywords = keywords if '"' in keywords else f'"{keywords}"'
+    encoded_keywords = quote(quoted_keywords)
 
     results = []
-    blocks = driver.find_elements("css selector", '[role="listitem"]')
-    for block in blocks:
-        try:
-            link_el = block.find_element("css selector", "a[href*='/in/']")
-            link = link_el.get_attribute("href")
-        except Exception:
-            continue  # not a person result
+    for page in range(1, MAX_PEOPLE_PAGES + 1):
+        url = f"https://www.linkedin.com/search/results/people/?keywords={encoded_keywords}&page={page}"
+        driver.get(url)
+        human_like_delay(5, 9)
 
-        text = block.text.strip()
-        if not text:
-            continue
+        if not handle_checkpoint(driver, interactive):
+            break
 
-        lines = [l for l in text.split("\n") if l.strip()]
-        name = lines[0] if lines else ""
-        # Headline is typically the next non-connection-degree line
-        headline = ""
-        for line in lines[1:]:
-            if line.strip() not in ("• 1st", "• 2nd", "• 3rd+"):
-                headline = line.strip()
-                break
+        blocks = driver.find_elements("css selector", '[role="listitem"]')
+        if not blocks:
+            break  # no more results
 
-        results.append({"name": name, "headline": headline, "link": link, "full_text": text[:500]})
+        page_had_results = False
+        for block in blocks:
+            try:
+                link_el = block.find_element("css selector", "a[href*='/in/']")
+                link = link_el.get_attribute("href")
+            except Exception:
+                continue  # not a person result
+
+            text = block.text.strip()
+            if not text:
+                continue
+            page_had_results = True
+
+            lines = [l for l in text.split("\n") if l.strip()]
+            name = lines[0] if lines else ""
+            # Headline is typically the next non-connection-degree line
+            headline = ""
+            for line in lines[1:]:
+                if line.strip() not in ("• 1st", "• 2nd", "• 3rd+"):
+                    headline = line.strip()
+                    break
+
+            results.append({"name": name, "headline": headline, "link": link, "full_text": text[:500]})
+
+        if not page_had_results:
+            break
+        if page < MAX_PEOPLE_PAGES:
+            human_like_delay(3, 6)
 
     return results
 

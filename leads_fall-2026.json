@@ -1,299 +1,1034 @@
 {
   "batch_tag": "YC F26",
   "yc_batch_slug": "fall-2026",
-  "generated_at": "2026-08-03T02:01:48.043975+00:00",
-  "yc_directory_count": 6,
+  "generated_at": "2026-08-25T22:50:37.768743+00:00",
+  "yc_directory_count": 19,
   "leads": [
     {
-      "name": "Jamie Yau",
-      "company_guess": "Collar",
-      "link": "https://www.linkedin.com/in/jamiey3u",
-      "snippet": "Jamie Yau - Co-Founder @ Collar (YC F26) The AI ...\nCo-Founder @ Collar (YC F26) The AI Platform for Private Market Investors. \u00b7 Experience: Collar (YC F26) \u00b7 Education: Y Combinator \u00b7 Location: United States ...",
-      "yc_match": "Collar",
-      "pre_mfn": false,
-      "sources": [
-        "google_bio_tag",
-        "google_announcement"
-      ],
-      "ai_relevant": true,
-      "ai_reason": "bio tag Collar YC F26"
-    },
-    {
-      "name": "Seungmin Hong",
-      "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/in/shong0504",
-      "snippet": "Seungmin Hong - Co-founder @ Simantic (YC F26)\nCo-founder @ Simantic (YC F26) | ECE @ UWaterloo \u00b7 Building firmware simulation for agentic hardware development \u00b7 Experience: Simantic (YC F26) ...",
+      "name": "Simantic Joins Y Combinator to Modernize Embedded ...",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/shong0504_simantic-yc-f26-is-joining-y-combinator-activity-7479048301078540288-pKG-",
+      "snippet": "Simantic Joins Y Combinator to Modernize Embedded ...\nSimantic (YC F26) is joining Y Combinator for the Fall 2026 batch to modernize embedded systems and electronics engineering!",
       "yc_match": "Simantic",
       "pre_mfn": false,
       "sources": [
-        "google_bio_tag"
+        "google_announcement",
+        "google_join",
+        "google_hiring",
+        "google_raised"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Simantic YC F26"
+      "ai_reason": "Company announces joining YC F26"
     },
     {
-      "name": "Simantic (YC F26)",
-      "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/company/simantic",
-      "snippet": "Simantic (YC F26)\nSeungmin Hong. Co-founder @ Simantic (YC F26) | ECE @\u2026 Click here to ... Co-founder @ Simantic (YC F26) | ECE @ UWaterloo. 3w Edited. Report this post",
-      "yc_match": "Simantic",
+      "name": "Sridipto Ghosh's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/sridiptoghosh_antimattr-yc-f26-is-now-backed-by-y-combinator-activity-7496052325606653952-WIM9",
+      "snippet": "Sridipto Ghosh's Post\nantimattr (YC F26) is now backed by Y Combinator with Sirsho | 94 comments on LinkedIn.",
+      "yc_match": "antimattr",
       "pre_mfn": false,
       "sources": [
-        "google_bio_tag",
-        "google_announcement"
+        "google_announcement",
+        "google_backed",
+        "google_hiring"
       ],
       "ai_relevant": true,
-      "ai_reason": "company page tag YC F26"
+      "ai_reason": "Company backed by YC F26"
     },
     {
-      "name": "William Mahon",
-      "company_guess": "ClaimKit",
-      "link": "https://www.linkedin.com/in/wmaho",
-      "snippet": "William Mahon - Co-Founder & CTO at ClaimKit (YC F26)\nCo-Founder & CTO at ClaimKit (YC F26) \u00b7 Ex-Google Software Engineer Building ClaimKit to help companies claim their R&amp;D tax incentives faster &amp; ...",
-      "yc_match": null,
-      "pre_mfn": true,
+      "name": "Lantern AI YC F26 Backed by Y Combinator",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/thomas-lantern-ai_lantern-ai-yc-f26-is-officially-backed-activity-7492758110038540288-2JJD",
+      "snippet": "Lantern AI YC F26 Backed by Y Combinator\nLantern AI (YC F26) is officially backed by Y Combinator. Here's the story of how we got here. We started as an AI interviewer.",
+      "yc_match": "Lantern AI",
+      "pre_mfn": false,
       "sources": [
-        "google_bio_tag"
+        "google_announcement",
+        "google_backed",
+        "google_hiring"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag ClaimKit YC F26"
-    },
-    {
-      "name": "tochukwu nkemdilim",
-      "company_guess": "microsandbox",
-      "link": "https://ca.linkedin.com/in/toksdotdev",
-      "snippet": "tochukwu nkemdilim - co-founder @ microsandbox (yc f26)\nExperience. Microsandbox (YC F26) Graphic. Co-founder & CTO. Microsandbox (YC F26). Mar 2026 - Present 5 months. fast, secure, and programmable microVM runtime ...",
-      "yc_match": null,
-      "pre_mfn": true,
-      "sources": [
-        "google_bio_tag"
-      ],
-      "ai_relevant": true,
-      "ai_reason": "bio tag microsandbox YC F26"
+      "ai_reason": "Company backed by YC F26"
     },
     {
       "name": "Collar (YC F26)",
       "company_guess": "Collar",
       "link": "https://www.linkedin.com/company/collarai",
-      "snippet": "Collar (YC F26)\nCo-Founder @ Collar (YC F26)\u2026 Click here to view Natasha Wijaya's profile. Natasha Wijaya. Student at City University of Hong Kong \u00b7 See all employees. Similar ...",
+      "snippet": "Collar (YC F26)\nJust like our customers and investors at Y Combinator (thank you Tom Blomfield and Grey Baker) have. ... (YC F26)!) And if we pull this off, the next kid ...",
       "yc_match": "Collar",
       "pre_mfn": false,
       "sources": [
-        "google_bio_tag"
+        "google_announcement",
+        "google_join"
       ],
       "ai_relevant": true,
-      "ai_reason": "company page Collar YC F26"
+      "ai_reason": "Founder referencing own company's YC F26 batch"
     },
     {
-      "name": "Kazel Koh En Yang",
-      "company_guess": "Collar",
-      "link": "https://sg.linkedin.com/in/kazel-koh-en-yang-811172186",
-      "snippet": "Kazel Koh En Yang - @ Collar (YC F'26) | Inventor | GIC\nCollar (YC F'26) | Inventor | GIC \u00b7 I build &amp; invest in things people want (hopefully) \u00b7 Experience: Collar (YC F26) ... Co-Founder of CyberLife AI - ...",
-      "yc_match": "Collar",
+      "name": "YC F26 Application Deadline in 7 Days: Don't Miss Your ...",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/maxkolysh_the-yc-f26-application-deadline-is-in-7-days-activity-7485111947609157632-wtQ-",
+      "snippet": "YC F26 Application Deadline in 7 Days: Don't Miss Your ...\nThe YC F26 application deadline is in 7 days. One thing I ... PG's whole thesis for Y Combinator founders was always simple: don't die.",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement",
+        "google_join",
+        "google_hiring",
+        "google_raised"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Application deadline reminder"
+    },
+    {
+      "name": "YC decides Fall 2026 on August 28.",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/pulse/yc-decides-fall-2026-august-28-artem-luko-sjxbe",
+      "snippet": "YC decides Fall 2026 on August 28.\nYC F26 decisions land in 11 days. Most founders are waiting on the ... Y Combinator News will cover batch dates, RFS, who got in, and ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement",
+        "google_hiring",
+        "google_raised"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "General news about batch decisions, not specific company"
+    },
+    {
+      "name": "Rence (YC F26)",
+      "company_guess": "Rence",
+      "link": "https://www.linkedin.com/company/rence-ai",
+      "snippet": "Rence (YC F26)\nRence (YC F26) is now backed by Y Combinator! Anyone who's done face-to-face sales knows the feeling: you close a deal and you're on top of the world, then you ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement",
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company backed by YC F26"
+    },
+    {
+      "name": "Foundrly Addresses YC's F26 Startup Needs",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/get-foundrly_ycombinator-activity-7486131919877816320-y09M",
+      "snippet": "Foundrly Addresses YC's F26 Startup Needs\nFoundrly Addresses YC's F26 Startup Needs. View organization page for ... Y Combinator's latest Request for Startups (RFS) includes a ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement",
+        "google_hiring"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Mentions YC RFS, not a join signal"
+    },
+    {
+      "name": "Venkatesh Setty's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/venkatesh-setty_for-the-first-time-in-almost-five-years-activity-7497502954296471552-uMUe",
+      "snippet": "Venkatesh Setty's Post\nFor the first time in almost five years, Y Combinator has backed a nonprofit Indian Startup Adalat AI(YC F26). When YC breaks a five year ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_announcement"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company backed by YC F26"
+    },
+    {
+      "name": "Lantern AI (YC F26)",
+      "company_guess": "Lantern AI",
+      "link": "https://www.linkedin.com/company/ai-lantern",
+      "snippet": "Lantern AI (YC F26)\nJoin now Sign in. Lantern AI (YC F26)'s cover photo. Lantern AI (YC F26). Technology, Information and Internet. San Francisco, CA 1,057 ...",
+      "yc_match": "Lantern AI",
       "pre_mfn": false,
       "sources": [
-        "google_bio_tag"
+        "google_join",
+        "google_backed"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Collar YC F26"
+      "ai_reason": "Company LinkedIn page tagged YC F26"
     },
     {
-      "name": "Simantic Joins Y Combinator to Modernize Embedded ...",
+      "name": "Aly Moursy's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/alymoursy_super-proud-and-honored-to-announce-that-activity-7494963581126586368-IXTX",
+      "snippet": "Aly Moursy's Post\nJoin now Sign in. Aly Moursy's Post. View profile for Aly Moursy. Aly Moursy. Founder & CEO, Veeza AI (YC F26). 3h Edited. Report this post",
+      "yc_match": "Veeza AI",
+      "pre_mfn": false,
+      "sources": [
+        "google_join"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder's bio tags company as YC F26"
+    },
+    {
+      "name": "Simantic (YC F26)",
       "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/posts/shong0504_simantic-yc-f26-is-joining-y-combinator-activity-7479048301078540288-pKG-",
-      "snippet": "Simantic Joins Y Combinator to Modernize Embedded ...\nSimantic Joins Y Combinator to Modernize Embedded Systems. View profile for Seungmin Hong. Seungmin Hong. Co-founder @ Simantic (YC F26) | ECE @ ...",
+      "link": "https://www.linkedin.com/company/simantic",
+      "snippet": "Simantic (YC F26)\nJoin now Sign in. Simantic (YC F26)'s cover photo. Simantic (YC F26). Software Development. Waterloo, ON 273 followers. Firmware Simulation for ...",
       "yc_match": "Simantic",
       "pre_mfn": false,
       "sources": [
-        "google_bio_tag",
-        "google_announcement"
+        "google_join",
+        "google_hiring"
       ],
       "ai_relevant": true,
-      "ai_reason": "headline Simantic joins YC"
+      "ai_reason": "Company LinkedIn page tagged YC F26"
     },
     {
-      "name": "Rachel Huang",
-      "company_guess": "ClaimKit",
-      "link": "https://au.linkedin.com/in/rach-huang",
-      "snippet": "Rachel Huang - CEO @ ClaimKit (YC F26) | R&D tax\nCEO @ ClaimKit (YC F26) | R&D tax \u00b7 Professional tennis player ... Joined the Antler residency program to find a co-founder to build my next start-up.",
-      "yc_match": null,
-      "pre_mfn": true,
-      "sources": [
-        "google_bio_tag"
-      ],
-      "ai_relevant": true,
-      "ai_reason": "bio tag ClaimKit YC F26"
-    },
-    {
-      "name": "Y Combinator's Post",
+      "name": "Junior Developer",
       "company_guess": null,
-      "link": "https://www.linkedin.com/posts/y-combinator_the-deadline-to-apply-for-yc-f26-is-tonight-activity-7487645454369726464-jU7f",
-      "snippet": "Y Combinator's Post\nThe deadline to apply for YC F26 is tonight at 8pm PT! If you're an ... Y Combinator's Post. View organization page for Y Combinator. Y ...",
-      "yc_match": null,
-      "pre_mfn": true,
-      "sources": [
-        "google_announcement"
-      ],
-      "ai_relevant": false,
-      "ai_reason": "generic deadline reminder"
-    },
-    {
-      "name": "Osama Jaber's Post",
-      "company_guess": null,
-      "link": "https://www.linkedin.com/posts/osama-jaber-osama2001_rightnow-yc-f26-is-joining-y-combinator-activity-7466832098037784577-0lnH",
-      "snippet": "Osama Jaber's Post\nRightNow (YC F26) is joining Y Combinator It started as a CUDA code editor. Now it's a full inference platform that makes AI models run ...",
-      "yc_match": "RightNow",
+      "link": "https://au.linkedin.com/jobs/view/junior-developer-at-forward-yc-f26-4458172195",
+      "snippet": "Junior Developer - Forward (YC F26)\nvor 2 Tagen \u2014 Join now Sign in. Junior Developer in Mountain View, CA. Expand search ... Industries. Financial Services. Referrals increase your chances of ...",
+      "yc_match": "Forward",
       "pre_mfn": false,
       "sources": [
-        "google_announcement"
+        "google_join"
       ],
       "ai_relevant": true,
-      "ai_reason": "RightNow joining YC F26"
+      "ai_reason": "Job posting at company tagged YC F26"
     },
     {
-      "name": "Max Kolysh's Post",
+      "name": "I got into YC F26! Third application. They said the ...",
       "company_guess": null,
-      "link": "https://www.linkedin.com/posts/maxkolysh_the-yc-f26-application-deadline-is-in-7-days-activity-7485111947609157632-wtQ-",
-      "snippet": "Max Kolysh's Post\nMax Kolysh's Post. View profile for Max Kolysh. Max Kolysh. Visiting Partner at Y Combinator. 2d. Report this post; Close menu. The YC F26 ...",
+      "link": "https://www.linkedin.com/posts/romerogers_some-personal-news-i-got-into-yc-f26-third-activity-7488976518178750464-QbQI",
+      "snippet": "I got into YC F26! Third application. They said the ...\nFinding the best builders to join us at Founder Ventures. ... Some personal news: I got into YC F26! Third application. They said the first two ...",
       "yc_match": null,
       "pre_mfn": true,
       "sources": [
-        "google_announcement"
+        "google_join"
       ],
-      "ai_relevant": false,
-      "ai_reason": "partner generic batch mention"
+      "ai_relevant": true,
+      "ai_reason": "Personal acceptance into YC F26"
     },
     {
-      "name": "yc #founders #software #ai #sass #innovation #disruption",
-      "company_guess": null,
-      "link": "https://www.linkedin.com/posts/rach-huang_yc-founders-software-activity-7486216008538480640-lyKA",
-      "snippet": "yc #founders #software #ai #sass #innovation #disruption\n... Y Combinator's summer request for startups was explicitly calling for \"AI-native service companies\" - defined as companies that don't sell ...",
-      "yc_match": null,
-      "pre_mfn": true,
-      "sources": [
-        "google_announcement"
-      ],
-      "ai_relevant": false,
-      "ai_reason": "hashtag spam generic RFS mention"
-    },
-    {
-      "name": "Iusef Hafith-Russo's Post",
-      "company_guess": null,
-      "link": "https://www.linkedin.com/posts/iusef_some-incredible-news-from-the-jordanian-startup-activity-7466849663976099840-5eY2",
-      "snippet": "Iusef Hafith-Russo's Post\nRightNow (YC F26) just got into Y Combinator! A couple of months ago I had a brief chat with Osama Jaber and Jaber J. of a potential ...",
-      "yc_match": "RightNow",
+      "name": "Justin Wang-Lap Tang's Post",
+      "company_guess": "Lantern",
+      "link": "https://www.linkedin.com/posts/justin-wang-lap-tang-5523b9175_apparently-i-never-posted-about-getting-into-activity-7498069234669895681-UPk3",
+      "snippet": "Justin Wang-Lap Tang's Post\nJoin now Sign in. Justin Wang-Lap Tang's Post. View profile for Justin Wang-Lap Tang \u00b7 Justin Wang-Lap Tang. CTO @ Lantern (YC F26) | Hire with ...",
+      "yc_match": "Lantern AI",
       "pre_mfn": false,
       "sources": [
-        "google_announcement"
+        "google_join"
       ],
       "ai_relevant": true,
-      "ai_reason": "RightNow got into YC"
+      "ai_reason": "CTO bio tags company as YC F26"
+    },
+    {
+      "name": "Aerogen Systems (YC S26)",
+      "company_guess": "Aerogen Systems",
+      "link": "https://www.linkedin.com/company/aerogen-systems-company",
+      "snippet": "Aerogen Systems (YC S26)\nAerogen Systems (YC S26) just joined Y Combinator We're building for one ... Similar pages. Computable. Technology, Information and Internet \u00b7 Rence ().",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_joined"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Different batch (YC S26)"
+    },
+    {
+      "name": "Ren\u00e9 Sultan",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/renesultan",
+      "snippet": "Ren\u00e9 Sultan - Ramp Labs | Ex-YC, Spotify ML, Columbia\nRamp Labs | Ex-YC, Spotify ML, Columbia \u00b7 Emerging Polymath. \u00b7 Experience: Ramp \u00b7 Education: Y Combinator \u00b7 Location: San Francisco \u00b7 500+ connections on ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_joined"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No specific batch mentioned, generic ex-YC mention"
+    },
+    {
+      "name": "Yashas Gunderia",
+      "company_guess": null,
+      "link": "https://in.linkedin.com/in/yashasgunderia",
+      "snippet": "Yashas Gunderia - Founder & CEO, @Ivance\nI'm Yashas Gunderia, a young entrepreneur and innovator driven by the mission to Innovate and Advance. I'm the Founder of Ivance, a parent brand where I ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_joined"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention at all"
+    },
+    {
+      "name": "Shubham Pote",
+      "company_guess": null,
+      "link": "https://in.linkedin.com/in/shubham-pote-686895291",
+      "snippet": "Shubham Pote - AISSMS Institute of Information Technology\nStudent At AISSMS Institute of Information Technology \u00b7 Education: AISSMS Institute of Information Technology \u00b7 Location: Pune/Pimpri-Chinchwad Area \u00b7 93 ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_joined"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention at all"
+    },
+    {
+      "name": "Adalat AI (YC F26)'s Post",
+      "company_guess": "Adalat AI",
+      "link": "https://www.linkedin.com/posts/adalat-in_adalat-ai-is-now-backed-by-y-combinator-activity-7495831217955573761-9Sjz",
+      "snippet": "Adalat AI (YC F26)'s Post\nAdalat AI (YC F26)'s Post ... Adalat AI is now backed by Y Combinator! We're the first nonprofit YC has backed in nearly five years \u2014 and one of ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company backed by YC F26"
+    },
+    {
+      "name": "Jesse Feng's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/fengjesse_rence-yc-f26-is-now-backed-by-y-combinator-activity-7493920610482356224-TBkL",
+      "snippet": "Jesse Feng's Post\nRence (YC F26) is now backed by Y Combinator! Anyone who's done face-to-face sales knows the feeling: you close a deal and you're on top of ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Repost about company backed by YC F26"
+    },
+    {
+      "name": "Lantern AI Backed by Y Combinator",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/hermankc_thrilled-to-share-this-news-with-you-all-activity-7492766215279648769-Rq9V",
+      "snippet": "Lantern AI Backed by Y Combinator\nThrilled to share this news with you all \u2014 Lantern AI (YC F26) is officially backed by Y Combinator! Throughout the past few months, ...",
+      "yc_match": "Lantern AI",
+      "pre_mfn": false,
+      "sources": [
+        "google_backed",
+        "google_hiring"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company backed by YC F26"
+    },
+    {
+      "name": "Mozilla's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/mozilla-corporation_proud-to-share-that-mozilla-fellow-arghya-activity-7495913854829486083-E6kP",
+      "snippet": "Mozilla's Post\nView organization page for Adalat AI (YC F26) \u00b7 Adalat AI (YC F26). 17,052 followers. 2d. Adalat AI is now backed by Y Combinator! We're the ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Repost about company backed by YC F26"
+    },
+    {
+      "name": "Degla AI (YC F26)",
+      "company_guess": "Degla AI",
+      "link": "https://www.linkedin.com/company/deglaai",
+      "snippet": "Degla AI (YC F26)\nDegla AI (YC F26) | 359 followers on LinkedIn. We turn Natural Language into Multi-Drone Mission execution for Search & Rescue. Backed by Y Combinator.",
+      "yc_match": "Degla Inc",
+      "pre_mfn": false,
+      "sources": [
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company backed by YC F26"
+    },
+    {
+      "name": "Entrepolish \u00ae's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/entrepolish_adalatai-ycombinator-legaltech-activity-7496483787875438592-B1sq",
+      "snippet": "Entrepolish \u00ae's Post\n\u2696\ufe0f Adalat AI (YC F26) AI Becomes One of YC's Rare Nonprofit Investments Indian nonprofit Adalat AI (YC F26) has been backed by Y Combinator ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_backed"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Post about company backed by YC F26"
+    },
+    {
+      "name": "Scaler School of Technology's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/scaler-school-of-technology_congratulations-antimattr-yc-f26-on-being-activity-7496462941597323265-TbRj",
+      "snippet": "Scaler School of Technology's Post\nCongratulations antimattr (YC F26) on being selected for Y Combinator's Fall 2026 batch! Scaler Innovation Lab is home to a bunch of ...",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company antimattr selected for YC F26"
+    },
+    {
+      "name": "Lucky to be selected for Y Combinator's Startup School ...",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/strajo_lucky-to-be-selected-for-y-combinators-startup-activity-7451340146857160704-yMXB",
+      "snippet": "Lucky to be selected for Y Combinator's Startup School ...\nLucky to be selected for Y Combinator's Startup School 2026 out of 30,000 applications. ... Founder & CEO, Sentient OS (YC F26). Top 12 AI dev on ...",
+      "yc_match": "Sentient OS",
+      "pre_mfn": false,
+      "sources": [
+        "google_selected",
+        "google_raised"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder bio tag YC F26 for Sentient OS"
+    },
+    {
+      "name": "Bar and Bench's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/barandbench_startups-legaltech-incubatefund-activity-7496836138465398784-6pGj",
+      "snippet": "Bar and Bench's Post\n... (YC F26), which builds artificial intelligence-based tools for courts, has been selected for Y Combinator's Fall 2026 batch (YC F26). The ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company selected for YC F26"
+    },
+    {
+      "name": "Atul K Sharmaa's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/atul-k-sharmaa_antimattr-ycombinator-startups-activity-7495349096560537600-4k5o",
+      "snippet": "Atul K Sharmaa's Post\nSome news is just too good not to share. Our client #ANTIMATTR PRIVATE LIMITED has been selected for Y Combinator (YC F26)!",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Client company selected for YC F26"
+    },
+    {
+      "name": "Scaler Innovation Lab",
+      "company_guess": null,
+      "link": "https://in.linkedin.com/company/scaler-innovation-lab",
+      "snippet": "Scaler Innovation Lab\n20,329 followers. 1d. Report this post; Close menu. Congratulations antimattr (YC F26) on being selected for Y Combinator's Fall 2026 batch! Scaler ...",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company antimattr selected for YC F26"
+    },
+    {
+      "name": "Scaler School of Technology Employees, Location, Alumni",
+      "company_guess": null,
+      "link": "https://in.linkedin.com/school/scaler-school-of-technology/",
+      "snippet": "Scaler School of Technology Employees, Location, Alumni\nCongratulations antimattr (YC F26) on being selected for Y Combinator's Fall 2026 batch! Scaler Innovation Lab is home to a bunch of startups founded by ...",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company antimattr selected for YC F26"
+    },
+    {
+      "name": "Ramya Dronamraju",
+      "company_guess": "Adalat AI",
+      "link": "https://in.linkedin.com/in/rumya-dronamraju",
+      "snippet": "Ramya Dronamraju - Building Tech for Justice @Adalat AI ...\nBuilding Tech for Justice @Adalat AI (YC F26) | Lawyer \u00b7 I'm Ramya and I am a lawyer working to improve access to justice across India at Adalat AI.",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag for Adalat AI YC F26"
+    },
+    {
+      "name": "Aman pandit",
+      "company_guess": null,
+      "link": "https://in.linkedin.com/in/amanhq",
+      "snippet": "Aman pandit - building the next era of compliers\nbuilding the next era of compliers | Ex-BentoLabs (YC P26) \u00b7 Experience: Alan AI \u00b7 Education: Indian Institute of Technology, Madras \u00b7 Location: Bengaluru ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Mentions different batch tag YC P26"
+    },
+    {
+      "name": "Abhilash Pattnaik",
+      "company_guess": "Adalat AI",
+      "link": "https://in.linkedin.com/in/abhilash-pattnaik-8b46b7107",
+      "snippet": "Abhilash Pattnaik - Building court infrastructure @ Adalat AI ...\nBuilding court infrastructure @ Adalat AI (YC F26) | RGNUL \u00b7 Advocate turned AI-Law Lawyer who works on legal tech stacks that augment Indian Justice ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_selected"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag for Adalat AI YC F26"
+    },
+    {
+      "name": "Lantern AI (YC F26)'s Post",
+      "company_guess": "Lantern AI",
+      "link": "https://www.linkedin.com/posts/ai-lantern_make-something-people-want-glad-to-be-activity-7492829886563315712-5U0l",
+      "snippet": "Lantern AI (YC F26)'s Post\nLantern AI (YC F26) is officially backed by Y Combinator. Here's the story of how we got here. We started as an AI interviewer.",
+      "yc_match": "Lantern AI",
+      "pre_mfn": false,
+      "sources": [
+        "google_hiring"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company Lantern AI backed by YC F26"
+    },
+    {
+      "name": "YC Rejection is Not the End | Ravi Pratap Singh posted on ...",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/ravixalgorithm_y-combinator-sends-the-same-rejection-to-activity-7469132649677209600-PJoI",
+      "snippet": "YC Rejection is Not the End | Ravi Pratap Singh posted on ...\nY Combinator sends the same rejection to 24000 founders every batch ... YC F26. | 61 comments on LinkedIn.",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_hiring",
+        "google_raised"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "General rejection commentary, not a join signal"
+    },
+    {
+      "name": "Collar Founders Share Their Journey from HDB to YC F26",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/jamiey3u_singapore-start-up-collar-ai-by-poly-grads-activity-7492228435076038656-NuUe",
+      "snippet": "Collar Founders Share Their Journey from HDB to YC F26\n... Y Combinator (thank you Tom Blomfield and Grey Baker) have. And just ... (YC F26)!) And if we pull this off, the next kid from an HDB ...",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "google_raised"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founders discuss journey to YC F26"
+    },
+    {
+      "name": "Thomas Jeng's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/thomasjeng_pumped-to-see-what-comes-out-of-this-program-activity-7483464123020730368-bkYd",
+      "snippet": "Thomas Jeng's Post\nOne day to sharpen your YC F26 application. This Saturday (18 ... Y Combinator's F26 batch. What's on: A panel with the GPs of four ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_raised"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Event promo for sharpening YC application"
+    },
+    {
+      "name": "Sirsho Chakraborty's Post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/sirsho29_many-thanks-to-you-for-being-one-of-our-early-activity-7495093546841059328-84rv",
+      "snippet": "Sirsho Chakraborty's Post\nIt was around February 2026, someone forwarded me a link to pre-register for antimattr (YC F26) one. While everyone was building AI SaaS ...",
+      "yc_match": "Forward",
+      "pre_mfn": false,
+      "sources": [
+        "google_raised"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Personal story referencing antimattr YC F26"
+    },
+    {
+      "name": "YC Spring 2026 Demo Day: AI Startups Shift from Tools to Labor",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/posts/team-ignite-ventures_what-yc-spring-2026-felt-like-from-the-room-activity-7472672681197338624-kndT",
+      "snippet": "YC Spring 2026 Demo Day: AI Startups Shift from Tools to Labor\n... Raise VC only when capital genuinely bends the ... Next up is the company version, set for YC F26. ... Y Combinator alumni in our cohort; they mentioned ...",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "google_raised"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "General demo day recap, not specific signal"
     },
     {
       "name": "GUILD Joins Y Combinator S26 | Kaya Celebi posted on ...",
       "company_guess": null,
       "link": "https://www.linkedin.com/posts/kaya-celebi_were-excited-to-announce-that-guild-is-joining-activity-7475606483179741185-nPRl",
-      "snippet": "GUILD Joins Y Combinator S26 | Kaya Celebi posted on ...\nGUILD Joins Y Combinator ... Simantic (YC F26) is joining Y Combinator for the Fall 2026 batch to modernize embedded systems and electronics ...",
+      "snippet": "GUILD Joins Y Combinator S26 | Kaya Celebi posted on ...\nY Combinator. 1,781,089 followers. 3w. Report this post; Close ... Simantic (YC F26) is joining Y Combinator for the Fall 2026 batch to ...",
       "yc_match": "Simantic",
       "pre_mfn": false,
       "sources": [
-        "google_announcement"
+        "google_raised"
       ],
       "ai_relevant": true,
-      "ai_reason": "Simantic joining YC F26 batch mentioned"
+      "ai_reason": "Simantic joining YC F26 batch"
     },
     {
       "name": "Feed post",
-      "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/in/shong0504/",
-      "snippet": "Feed post\nSeungmin Hong\n  \u2022 2nd\nCo-founder @ Simantic (YC F26) | ECE @ UWaterloo\n4w \u2022 \nFollow\nSimantic (YC F26) is joining Y Combinator for the Fall 2026 batch to modernize embedded systems and electronics engineering!\n\nAI is changing how hardware and firmware is designed, but the tools we use to test and validate hardware are decades old, and not fit for how the industry is changing.\n\nWe\u2019re build",
-      "yc_match": "Simantic",
-      "pre_mfn": false,
-      "sources": [
-        "linkedin_post",
-        "linkedin_people"
-      ],
-      "ai_relevant": true,
-      "ai_reason": "full post announcing Simantic joining YC"
-    },
-    {
-      "name": "Feed post",
-      "company_guess": null,
-      "link": "https://www.linkedin.com/in/osama-jaber-osama2001/",
-      "snippet": "Feed post\nOsama Jaber\n  \u2022 3rd+\nHello there\n2mo \u2022 \nFollow\nRightNow (YC F26) is joining Y Combinator\n\nIt started as a CUDA code editor. Now it's a full inference platform that makes AI models run faster and cost less\n\nBuilding this with my brother Jaber J.. From Jordan, for the world\n\nTo everyone who tested the early versions, thank you\n634\n49\n7",
-      "yc_match": "RightNow",
-      "pre_mfn": false,
-      "sources": [
-        "linkedin_post",
-        "linkedin_people"
-      ],
-      "ai_relevant": true,
-      "ai_reason": "full post RightNow joining YC"
-    },
-    {
-      "name": "Feed post",
-      "company_guess": "Collar",
-      "link": "https://www.linkedin.com/company/sgsmucis/posts/",
-      "snippet": "Feed post\nSMU College of Integrative Studies\n2mo \u2022 \nFollow\nMeet Jamie Yau! \ud83d\ude80\u2728\n\nA Year 3 student pursuing her Individualised Major in Impact Management, Jamie is building at the intersection of technology, strategy, and innovation as the co-founder of Collar (YC F26) \u2014 a startup developing secure AI solutions for regulated industries like government and finance.\n\nWhat started as an idea has since g",
-      "yc_match": "Collar",
+      "company_guess": "Lantern",
+      "link": "https://www.linkedin.com/in/justin-wang-lap-tang-5523b9175/",
+      "snippet": "Feed post\nJustin Wang-Lap Tang\n  \u2022 3rd+\nCTO @ Lantern (YC F26) | Hire with Taste\n5h \u2022 \nFollow\nApparently I never posted about getting into Y Combinator? so here it is\n\nLantern AI (YC F26) is officially backed by YC  \ud83c\udf89 \n\nWe started with AI interviews last year, proved it worked, and kept building towards what my co-founderand I always envisioned: \n\nan AI hiring manager that runs your hiring loop.\n\n",
+      "yc_match": "Lantern AI",
       "pre_mfn": false,
       "sources": [
         "linkedin_post"
       ],
       "ai_relevant": true,
-      "ai_reason": "Collar YC F26 mention in bio post"
+      "ai_reason": "CTO's own post about Lantern AI YC F26"
     },
     {
-      "name": "Aziz Hanafi ",
-      "company_guess": "Degla AI",
-      "link": "https://www.linkedin.com/in/aziz-hanafi-496a67164/",
-      "snippet": "Aziz Hanafi \nBuilding @ Degla AI | Computer Science & Engineering @ MIT \ud83e\uddab",
-      "yc_match": "Degla Inc",
-      "pre_mfn": false,
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/dealroom-co/posts/",
+      "snippet": "Feed post\nDealroom.co\n 1d \u2022 \nFollow\nStartup spotlight: Gandr | YC F26\n\u2728 Text-to-speed, voice cloning, and a novel pricing model \u2728\n\nGandr offers text-to-speech and voice cloning with a flat-rate \"per concurrent stream\" model instead of the standard per-character/per-token pricing that forces developers to ration how much their software can say.\n\nThis is aimed squarely at high-volume, always-on use ",
+      "yc_match": null,
+      "pre_mfn": true,
       "sources": [
-        "linkedin_people"
+        "linkedin_post"
       ],
-      "ai_relevant": false,
-      "ai_reason": "no YC batch mention"
+      "ai_relevant": true,
+      "ai_reason": "Startup spotlight on Gandr YC F26"
     },
     {
-      "name": "Jamie Yau ",
-      "company_guess": "Collar",
-      "link": "https://www.linkedin.com/in/jamiey3u/",
-      "snippet": "Jamie Yau \nCo-Founder @ Collar (YC F26)                                                                            The AI Platform for Private Market Investors.",
-      "yc_match": "Collar",
-      "pre_mfn": false,
+      "name": "Feed post",
+      "company_guess": "Wingman Law",
+      "link": "https://www.linkedin.com/in/lsunwoo/",
+      "snippet": "Feed post\nSunwoo Lee\n  \u2022 2nd\nCo-Founder at Wingman Law (YC F26)\n1d \u2022 \nFollow\nOver 1,127 YC founders went to Stanford. Only 1 YC founder went to Creighton University. This is him.\n\nis the co-founder of. \n\nBefore he was my co-founder, he was my first hire, and I almost rejected him based on his resume. \n\nThis guy went to a law school I had literally never heard of.\n\nHe didn\u2019t even take the bar immed",
+      "yc_match": null,
+      "pre_mfn": true,
       "sources": [
+        "linkedin_post",
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Collar YC F26"
+      "ai_reason": "Bio tag for Wingman Law YC F26"
     },
     {
-      "name": "Olivia Laufer ",
-      "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/in/olivialaufer/",
-      "snippet": "Olivia Laufer \nFounding Engineer @ Simantic (YC F26) | prev @ AssistIQ | Computer Science (AI) @ University of Waterloo",
+      "name": "Feed post",
+      "company_guess": "Capveon",
+      "link": "https://www.linkedin.com/in/finn-lancaster-a21671219/",
+      "snippet": "Feed post\nFinn Lancaster\n  \u2022 3rd+\nCo-Founder & CEO at Capveon (YC F26)\n6d \u2022 \nFollow\nCapveon (YC F26) is joining Y Combinator's Fall 2026 batch.\n\nWe\u2019re building to make infrastructure and public-works dramatically better. To everyone who has supported us, thank you.\n\n\u2026 more\nCapveon \u2014 Turning Infrastructure Demand into Action\nCapveon \u2014 Turning Infrastructure Demand into Action\ncapveon.ai\n66\n7\n2",
+      "yc_match": "Capveon",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Capveon joining YC F26 batch"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/sridiptoghosh/",
+      "snippet": "Feed post\nSridipto Ghosh\n  \u2022 3rd+\nco-founder & CEO, antimattr (YC F26) | WTFund C1/25 | hardware & AI | physics & maths nerd turned entrepreneur | product & design geek | petrolhead | IIT (BHU), Varanasi\n5d \u2022 \nFollow\nantimattr (YC F26) is now backed by Y Combinator\n\nwith Sirsho\n531\n95\n4",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "antimattr backed by YC F26"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": "Wingman Law",
+      "link": "https://www.linkedin.com/in/nicholas-a-le/",
+      "snippet": "Feed post\nNicholas Le\n  \u2022 3rd+\nCo-Founder & Managing Attorney at Wingman Law (YC F26)\nVisit my website\n5d \u2022 Edited \u2022 \nFollow\nToday, Sunwoo Lee and I are opening Wingman Law (YC F26), an AI-native personal injury law firm joining Y Combinator\u2019s F26 batch.\n\nAt Wingman, we are building America\u2019s next-generation personal injury law firm. By building technology in-house specifically for how our firm op",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Wingman Law joining YC F26 batch"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/kumarmanas-nethil/",
+      "snippet": "Feed post\nKumarmanas Nethil\n  \u2022 3rd+\nBuilding tech for justice systems | Conversational AI\n7h \u2022 \nFollow\nThis one is close to my heart. It talks about a truth i first learned when joining this incredible team 2 years ago, and keep revisiting both in court-visits and on our Gather whiteboards \u2014 as we build for this incredible scale at\ud83d\ude80 \n\nIf this speaks to you, we are hiring in:\n\u2026 more\nAdalat AI (YC ",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Mentions Adalat AI YC tag in context of team"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/ai-frontpage/posts/",
+      "snippet": "Feed post\nAI FrontPage\n3d \u2022 Edited \u2022 \nFollow\nAI Enters Indian Courtrooms from October 1\n\nThe Andhra Pradesh High Court is set to roll out Adalat AI (YC F26) across 733 district courtrooms from October 1, 2026, bringing AI-assisted transcription and courtroom workflows into everyday judicial operations.\n\nAlso, Adalat AI joinsas it looks to scale its approach across India and the Global South.\n\nIt\u2019s",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Adalat AI YC F26 rollout news"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/indiaai/posts/",
+      "snippet": "Feed post\nIndiaAI\n14h \u2022 \nFollow\nStronger support to India\u2019s justice-tech ecosystem.\n\nAdalat AI (YC F26) is now backed by Y Combinator, marking a significant step forward for its mission to enable timely justice through technology.\n\nWith courtroom infrastructure spanning speech recognition, case management and paperless workflows, Adalat AI is currently serving 11 states and 6,000+ courtrooms acros",
+      "yc_match": "Forward",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Adalat AI now backed by YC F26"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/entrepolish/posts/",
+      "snippet": "Feed post\nEntrepolish \u00ae\n4d \u2022 \nFollow\n\u2696\ufe0f Adalat AI (YC F26) AI Becomes One of YC\u2019s Rare Nonprofit Investments\nIndian nonprofit Adalat AI (YC F26) has been backed by Y Combinator, which the organisation says marks its first nonprofit investment in nearly five years and one of the first Indian-founded nonprofits in YC's history.\nFounded byand,AI is building AI tools for India's courts, including real",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Company announcement of YC F26 backing"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/barandbench/posts/",
+      "snippet": "Feed post\nBar and Bench\n Learn more\n3d \u2022 \nFollow\nIndian legal-tech nonprofit Adalat AI (YC F26), which builds artificial intelligence-based tools for courts, has been selected for Y Combinator\u2019s Fall 2026 batch (YC F26).\n\nThe organisation said it is the first nonprofit to be backed by the Silicon Valley accelerator in nearly five years.\n\nAdalat AI was founded by lawyerand artificial intelligence r",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "News of selection into YC F26 batch"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": "Scimplify",
+      "link": "https://www.linkedin.com/in/suchet-kumar-779422189/",
+      "snippet": "Feed post\nSuchet Kumar\n  \u2022 3rd+\nM&A and Growth @Scimplify | Ex-WTFund, BCG | Hindu College\n5d \u2022 \nFollow\nCongratulations to Sirsho and Sridipto from antimattr (YC F26) on being selected for the Y Combinator F26 batch. \n\nProud to be an early user & investor through!\ud83d\ude80\n\u2026 more\nSridipto Ghosh\n  \u2022 3rd+\nco-founder & CEO, antimattr (YC F26) | WTFund C1/25 | hardware & AI | physics & maths nerd turned entre",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founders confirmed selected for YC F26"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/scaler-school-of-technology/posts/",
+      "snippet": "Feed post\nScaler School of Technology\n4d \u2022 \nFollow\nCongratulations antimattr (YC F26) on being selected for Y Combinator's Fall 2026 batch! \ud83c\udf89\n\nis home to a bunch of startups founded by some of the most driven names building in India today, andjoined the lab this year while working on an AI-first hardware interface for voice productivity, a set of AI-powered wearables that let people think, talk, a",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Congratulatory post confirming YC F26 selection"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/jerryxlingson/",
+      "snippet": "Feed post\nJerry X'Lingson\n  \u2022 2nd\nFounding Partner at NextGen Ventures\n2w \u2022 \nFollow\nI met Daniel, Riley, and Darryl on a random Tuesday in June. Ten days later, NextGen was their first investor.\n\nIt struck me within minutes that they had taken an insight earned inside private credit firms and stretched it into an idea they woke up and fell asleep thinking about. These founders are exactly where th",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_post"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No mention of YC batch tag"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": "Lantern",
+      "link": "https://www.linkedin.com/in/thomas-lantern-ai/",
+      "snippet": "Feed post\nThomas Chan\n  \u2022 2nd\nCEO @ Lantern (YC F26) | Hire with Taste\nVisit my website\n2w \u2022 Edited \u2022 \nFollow\nLantern AI (YC F26) is officially backed by Y Combinator. \ud83d\ude80\n\nHere's the story of how we got here.\n\nWe started as an AI interviewer. Teams at,, andused us across 10 markets, along with almost every major university in Hong Kong.\n\nThen our clients started asking harder questions:\n\n\u2192 \"Lantern",
+      "yc_match": "Lantern AI",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_post",
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder announcing company backed by YC F26"
+    },
+    {
+      "name": "Feed post",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/company/uwvelocity/posts/",
+      "snippet": "Feed post\nVelocity\n 3w \u2022 \nFollow\nA firmware testing bottleneck became the starting point for Simantic (YC F26)'s rethink of how hardware gets built.\n\nfounders(BASc '26) and(BASc in progress) kept running into the same wall: AI has gotten good at writing code, but testing firmware still means waiting on physical hardware that may not exist yet. They decided to build the fix instead of waiting for i",
       "yc_match": "Simantic",
       "pre_mfn": false,
       "sources": [
-        "linkedin_people"
+        "linkedin_post"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Simantic YC F26"
+      "ai_reason": "Company story confirming YC F26 selection"
     },
     {
-      "name": "tochukwu nkemdilim ",
-      "company_guess": "microsandbox",
-      "link": "https://www.linkedin.com/in/toksdotdev/",
-      "snippet": "tochukwu nkemdilim \nco-founder @ microsandbox (yc f26)",
+      "name": "Ham Alghaithi ",
+      "company_guess": "Gandr",
+      "link": "https://www.linkedin.com/in/hamalghaithi/",
+      "snippet": "Ham Alghaithi \nCofounder @ Gandr (YC F26)",
       "yc_match": null,
       "pre_mfn": true,
       "sources": [
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag microsandbox YC F26"
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Aryan Singhal \u2022 2nd",
+      "company_guess": "Mirrors",
+      "link": "https://www.linkedin.com/in/aisinghal/",
+      "snippet": "Aryan Singhal \u2022 2nd\nCo-founder @ Mirrors (YC F26) | Regression testing for AI agents",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Satyam Singh ",
+      "company_guess": "Simulithic",
+      "link": "https://www.linkedin.com/in/satyamsingh2003/",
+      "snippet": "Satyam Singh \nFounder, CTO @Simulithic | 41x Hackathon Wins | NASA Space App Challenge winner 2024-25 | prev - Ramp, Bree (YC S21)",
+      "yc_match": "Simulithic",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Mentions different batch (YC S21)"
+    },
+    {
+      "name": "Ethan Nguyen ",
+      "company_guess": "Peregrine",
+      "link": "https://www.linkedin.com/in/enguyenlv/",
+      "snippet": "Ethan Nguyen \nCo-Founder at Peregrine (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Daniel Yoon ",
+      "company_guess": "Forward",
+      "link": "https://www.linkedin.com/in/danielyoon2004/",
+      "snippet": "Daniel Yoon \nCo-Founder @ Forward (YC F26)",
+      "yc_match": "Forward",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Jonas Rosengren ",
+      "company_guess": "Rence",
+      "link": "https://www.linkedin.com/in/jonas-rosengren-2a4908211/",
+      "snippet": "Jonas Rosengren \nBuilding AI for in-person sales @ Rence (YC F26) | ex-lovable",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Riley Janjis ",
+      "company_guess": "Forward",
+      "link": "https://www.linkedin.com/in/riley-janjis-6aa9b5264/",
+      "snippet": "Riley Janjis \nCo-Founder @ Forward (YC F26) | Private Credit Origination",
+      "yc_match": "Forward",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Aditya Vellanki \u2022 2nd",
+      "company_guess": "TKS",
+      "link": "https://www.linkedin.com/in/adityahemanth/",
+      "snippet": "Aditya Vellanki \u2022 2nd\n18 \u2022 Co-Founder, Sentient OS (YC F26) \u2022 Alum @ TKS",
+      "yc_match": "Sentient OS",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Jamie Yau ",
+      "company_guess": "Collar",
+      "link": "https://www.linkedin.com/in/jamiey3u/",
+      "snippet": "Jamie Yau \nCo-Founder @ Collar (YC F26)                                                                            The AI platform for Private Markets",
+      "yc_match": "Collar",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Chandler Supple ",
+      "company_guess": "River",
+      "link": "https://www.linkedin.com/in/chandlersupple/",
+      "snippet": "Chandler Supple \nCo-Founder @ River (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Charles Goulet ",
+      "company_guess": "Telamont",
+      "link": "https://www.linkedin.com/in/charles-goulet-62655b17a/",
+      "snippet": "Charles Goulet \nCo-Founder at Telamont (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Hakan Chunton ",
+      "company_guess": "Orca Aerospace",
+      "link": "https://www.linkedin.com/in/hakan-chunton/",
+      "snippet": "Hakan Chunton \nCo-Founder of Orca Aerospace (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Darryl Luo ",
+      "company_guess": "Forward",
+      "link": "https://www.linkedin.com/in/darryl-luo-b0496a266/",
+      "snippet": "Darryl Luo \nCo-Founder @ Forward (YC F26)",
+      "yc_match": "Forward",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Sai Vamshi Batchu ",
+      "company_guess": "GodHands",
+      "link": "https://www.linkedin.com/in/sai-vamshi-batchu-129256194/",
+      "snippet": "Sai Vamshi Batchu \nBuilding GodHands (YC F26) | CS @ IIT KGP | Algorithmic Trading",
+      "yc_match": "GodHands",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Jesse Feng ",
+      "company_guess": "Rence",
+      "link": "https://www.linkedin.com/in/fengjesse/",
+      "snippet": "Jesse Feng \nAI platform for in-person & field sales | Co-Founder @ Rence (YC F26) | ex-Uber",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Sam Alghaithi ",
+      "company_guess": "Gandr",
+      "link": "https://www.linkedin.com/in/sam-alghaithi/",
+      "snippet": "Sam Alghaithi \nCofounder @ Gandr (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Sirsha Chakraborty ",
+      "company_guess": "antimattr",
+      "link": "https://www.linkedin.com/in/sirsho29/",
+      "snippet": "Sirsha Chakraborty \nco-founder @antimattr (YC F26, WTFund) | building the human to agent interface",
+      "yc_match": "antimattr",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Aditya Bommakanti ",
+      "company_guess": "GodHands",
+      "link": "https://www.linkedin.com/in/aditya-bommakanti-6b035321a/",
+      "snippet": "Aditya Bommakanti \nBuilding GodHands (YC F26) | CS @ IIT Delhi | Algorithmic Trading",
+      "yc_match": "GodHands",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Bio tag showing YC F26 affiliation"
+    },
+    {
+      "name": "Brison Moorhead ",
+      "company_guess": "Capveon",
+      "link": "https://www.linkedin.com/in/brisonmoorhead/",
+      "snippet": "Brison Moorhead \nCo-Founder & COO at Capveon (YC F26)",
+      "yc_match": "Capveon",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Co-founder with YC F26 tag"
+    },
+    {
+      "name": "Frans Paborn ",
+      "company_guess": "Rence",
+      "link": "https://www.linkedin.com/in/frans-paborn-990120305/",
+      "snippet": "Frans Paborn \nBuilding AI for in-person sales | Co-Founder @ Rence (YC F26) | ex-Uber",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Co-founder with YC F26 tag"
     },
     {
       "name": "Marc McCole ",
@@ -306,46 +1041,293 @@
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Fenn AI YC F26"
+      "ai_reason": "Founder building company with YC F26 tag"
     },
     {
-      "name": "Seddik Turki ",
-      "company_guess": "Degla AI",
-      "link": "https://www.linkedin.com/in/seddik-turki-737401199/",
-      "snippet": "Seddik Turki \nFounding AI Engineer @ Degla AI (YC F26) | Kaggle Master | AI Agents",
-      "yc_match": "Degla Inc",
-      "pre_mfn": false,
+      "name": "Pratyush Saini ",
+      "company_guess": "ByteAsk",
+      "link": "https://www.linkedin.com/in/pratyush-saini-96108a1a7/",
+      "snippet": "Pratyush Saini \nCo-Founder @ ByteAsk (YC F26) | CSE @ IIT Delhi",
+      "yc_match": null,
+      "pre_mfn": true,
       "sources": [
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Degla AI YC F26"
+      "ai_reason": "Co-founder with YC F26 tag"
     },
     {
-      "name": "Derek Ho ",
-      "company_guess": "Simantic",
-      "link": "https://www.linkedin.com/in/derek-ho1809/",
-      "snippet": "Derek Ho \nFounding Engineer @ Simantic (YC F26)",
-      "yc_match": "Simantic",
-      "pre_mfn": false,
+      "name": "tochukwu nkemdilim ",
+      "company_guess": "microsandbox",
+      "link": "https://www.linkedin.com/in/toksdotdev/",
+      "snippet": "tochukwu nkemdilim \nco-founder @ microsandbox (yc f26)",
+      "yc_match": null,
+      "pre_mfn": true,
       "sources": [
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "bio tag Simantic YC F26"
+      "ai_reason": "Co-founder with YC F26 tag"
+    },
+    {
+      "name": "Marshall K. \u2022 3rd+",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/marshall-ai/",
+      "snippet": "Marshall K. \u2022 3rd+\n\u2235 UFO",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No company or YC mention"
+    },
+    {
+      "name": "Lakshmi Narayana ",
+      "company_guess": "EVO",
+      "link": "https://www.linkedin.com/in/lakshmi-narayana-ln/",
+      "snippet": "Lakshmi Narayana \nCo-Founder @ EVO (YC F26) | Ex Trupeer.ai | Ex Samsung Korea | CSE IIT Bombay | AIR 13 - JEE \u201916",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Co-founder with YC F26 tag"
+    },
+    {
+      "name": "Osama Jaber ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/osama-jaber-osama2001/",
+      "snippet": "Osama Jaber \nHello there",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "Generic greeting, no YC mention"
     },
     {
       "name": "Kazel Koh En Yang ",
-      "company_guess": "Collar",
+      "company_guess": "Collar AI",
       "link": "https://www.linkedin.com/in/kazel-koh-en-yang-811172186/",
-      "snippet": "Kazel Koh En Yang \n@ Collar (YC F\u201926) | Inventor | GIC",
+      "snippet": "Kazel Koh En Yang \nCo-Founder @ Collar AI (YC F\u201926) | Inventor | GIC",
       "yc_match": "Collar",
       "pre_mfn": false,
       "sources": [
         "linkedin_people"
       ],
       "ai_relevant": true,
-      "ai_reason": "Bio tag shows company joined YC F'26"
+      "ai_reason": "Co-founder with YC F26 tag"
+    },
+    {
+      "name": "Ravi Mishra ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/ravimishra/",
+      "snippet": "Ravi Mishra \nBuilding the Cloud for the Agentic Coding Age",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention"
+    },
+    {
+      "name": "Assanali Batyrkhan ",
+      "company_guess": "Lantern AI",
+      "link": "https://www.linkedin.com/in/assanali-batyrkhan/",
+      "snippet": "Assanali Batyrkhan \nData & AI @ Siemens | prev. @ Lantern AI (YC F26) | Data Science @ CityUHK | AI Full Stack Engineering | Building something",
+      "yc_match": "Lantern AI",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Previous role at YC F26 company"
+    },
+    {
+      "name": "Alex Fooladi ",
+      "company_guess": "Rence",
+      "link": "https://www.linkedin.com/in/alexfooladi/",
+      "snippet": "Alex Fooladi \nBuilding AI that runs with field sales @ Rence (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Building company with YC F26 tag"
+    },
+    {
+      "name": "Edward Liu ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/edward-liu-5030a0282/",
+      "snippet": "Edward Liu \nReconero",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention"
+    },
+    {
+      "name": "Alok Bishoyi ",
+      "company_guess": "EVO",
+      "link": "https://www.linkedin.com/in/alok-bishoyi/",
+      "snippet": "Alok Bishoyi \nOptimizing your inference spends @ EVO | IIT B",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC batch tag mentioned"
+    },
+    {
+      "name": "Balaji Rajendran ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/balaji-rajendran-1253a395/",
+      "snippet": "Balaji Rajendran \nMachine Learning Runtime at Adalat AI (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Role at YC F26 company"
+    },
+    {
+      "name": "Arghya Bhattacharya ",
+      "company_guess": "Adalat AI",
+      "link": "https://www.linkedin.com/in/arghya-bhattacharya/",
+      "snippet": "Arghya Bhattacharya \nCTO @ Adalat AI | Building tech for justice systems",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC batch tag mentioned"
+    },
+    {
+      "name": "Devano Jonathan ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/devoob/",
+      "snippet": "Devano Jonathan \nAI Engineer and Data Scientist. Integrating AI into Finance. Graduating from HKU in December 2026 and open to full time roles from January 2027.",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention"
+    },
+    {
+      "name": "Gajraj Chouhan ",
+      "company_guess": "Adalat AI",
+      "link": "https://www.linkedin.com/in/gajrajgchouhan/",
+      "snippet": "Gajraj Chouhan \nSoftware Engineer @ Adalat AI (YC F26) | IIT Mandi Grad | Building scalable applications",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Role at YC F26 company"
+    },
+    {
+      "name": "Utkarsh Saxena ",
+      "company_guess": "Adalat AI",
+      "link": "https://www.linkedin.com/in/utkarsh-saxena-2048636a/",
+      "snippet": "Utkarsh Saxena \nCEO @ Adalat AI | Empowering courts, transforming justice",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC batch tag mentioned"
+    },
+    {
+      "name": "Jin-Oh Youm ",
+      "company_guess": "Lyra",
+      "link": "https://www.linkedin.com/in/jinohyoum/",
+      "snippet": "Jin-Oh Youm \nFDE @ Lyra",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": false,
+      "ai_reason": "No YC mention"
+    },
+    {
+      "name": "Theodor Ljungdahl ",
+      "company_guess": "Tandela",
+      "link": "https://www.linkedin.com/in/theodorljungdahl/",
+      "snippet": "Theodor Ljungdahl \nManaging Partner @ Tandela (YC S26) | Less Admin. More Dentistry",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Managing Partner with YC S26 tag"
+    },
+    {
+      "name": "Julian Olschwang ",
+      "company_guess": "Hemlock",
+      "link": "https://www.linkedin.com/in/julian-olschwang/",
+      "snippet": "Julian Olschwang \nFounder @ Hemlock (YC F26) + Electrical and Computer Engineering @ CMU",
+      "yc_match": "Hemlock",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder with YC F26 tag"
+    },
+    {
+      "name": "Seungmin Hong ",
+      "company_guess": "Simantic",
+      "link": "https://www.linkedin.com/in/shong0504/",
+      "snippet": "Seungmin Hong \nCo-founder @ Simantic (YC F26) | ECE @ UWaterloo",
+      "yc_match": "Simantic",
+      "pre_mfn": false,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Co-founder with YC F26 tag"
+    },
+    {
+      "name": "Alexander Schulz ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/alexander-schulz-k%C3%B6ln/",
+      "snippet": "Alexander Schulz \nCTO & Founder of CONUS (YC F26)",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder with YC F26 tag"
+    },
+    {
+      "name": "Maximilian Becker ",
+      "company_guess": null,
+      "link": "https://www.linkedin.com/in/maximilian-becker-koeln/",
+      "snippet": "Maximilian Becker \nCPO & Founder of CONUS (YC F26) | M.Sc. FAU",
+      "yc_match": null,
+      "pre_mfn": true,
+      "sources": [
+        "linkedin_people"
+      ],
+      "ai_relevant": true,
+      "ai_reason": "Founder with YC F26 tag"
     }
   ]
 }

@@ -34,12 +34,45 @@ import sys
 import time
 from pathlib import Path
 
-QUERY_TEMPLATES = [
-    ('bio_tag', 'site:linkedin.com "Co-founder" "{batch_tag}"'),
-    ('announcement', 'site:linkedin.com "{batch_tag}" "Y Combinator"'),
-]
+from yc_queries import BASE_PATTERNS
+
+# Google needs the "site:" operator to restrict results to LinkedIn;
+# BASE_PATTERNS itself is bare (shared with the native LinkedIn search
+# surfaces in li_unified_leads.py, which are already scoped to
+# linkedin.com by virtue of hitting linkedin.com's own search directly).
+QUERY_TEMPLATES = [(label, f"site:linkedin.com {pattern}") for label, pattern in BASE_PATTERNS]
 
 SNAPSHOT_DIR = Path("li_snapshots_selenium")
+
+
+def detect_chrome_major_version():
+    """
+    undetected-chromedriver, left to its own defaults, fetches whatever
+    ChromeDriver build is globally "latest stable" rather than one that
+    matches the Chrome actually installed on this machine; those two
+    drift apart whenever Chrome hasn't auto-updated yet, causing a hard
+    version mismatch at session creation (confirmed live: a real run
+    failed outright with "ChromeDriver only supports Chrome version 152,
+    Current browser version is 151..."). Detecting the real installed
+    version and passing it explicitly avoids that class of failure.
+    Same fix as sr_google_search.py's version of this function.
+    """
+    import undetected_chromedriver as uc
+
+    exe = uc.find_chrome_executable()
+    if not exe:
+        return None
+    try:
+        import re
+        import subprocess
+
+        out = subprocess.run([exe, "--version"], capture_output=True, text=True, timeout=5).stdout
+        m = re.search(r"(\d+)\.", out)
+        if m:
+            return int(m.group(1))
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return None
 
 
 def make_driver(headless: bool = True):
@@ -63,7 +96,7 @@ def make_driver(headless: bool = True):
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--window-size=1280,900")
 
-    driver = uc.Chrome(options=options)
+    driver = uc.Chrome(options=options, version_main=detect_chrome_major_version())
     return driver
 
 
